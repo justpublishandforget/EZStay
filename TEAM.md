@@ -9,7 +9,7 @@ light-text -> #6A6A6A
 ![site map](/images/sitemap.jpeg)
 
 ## Git Notes - for team members
-
+   
 | Description   | Command |
 |--------------- | --------------- |
 |configure name | `git config --global "[username]"` |
