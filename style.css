@@ -1,7 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
 
 
 * {
-  font-family: "Poppins", sans-serif;
   padding:0; 
   margin:0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/*--------------------------------------------Login Page-------------------------------------------------*/
+
+#background-login {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+.blue-text {
+  color: #587DFF;
+}
+
+.container-login {
+  display: flex;
+  margin: 5vh 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  margin-top: 10vh;
+  padding: 2vh 2vw;
+  font-size: 17px;
+  width: 32vw;
+  height: 60vh;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px rgb(140, 140, 140);
+}
+
+.login-form form > input,button{
+  width: 100%;
+  height: 40px;
+  margin: 10px 0 20px 0;
+  padding: 10px;
+  border: 1px solid rgb(142, 142, 142);
+  border-radius: 5px;
+}
+
+.login-form form > button{
+  background-color: #FDDB32;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-weight: 600;
+}
+
+.login-text a {
+  font-size: 15px;
+  color: #6A6A6A;
+}
+
+.login-form > p {
+  position: relative;
+  top: 45px;
+  color: #6A6A6A;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+.login-text {
+  display: flex;
+  justify-content: space-between;
 }

@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body>
-      <div class="container-login">
-        <img src="images/logo.svg" alt="EZ Stay logo">
-        <div class="login-form">
-          <form>
-            <label for="username">Username</label>
-          </form>
-        </div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-login">
+    <img src="images/logo.svg" alt="EZ Stay logo">
+    <div class="login-form">
+      <h3 style="font-weight: 600; font-size: 25px;">Sign in or create your account</h3>
+      <br>
+      <form>
+        <label for="username">Username</label><br>
+        <input type="text" name="username" id="username" placeholder="username">
+        <label for="password">Password</label><br>
+        <input type="password" name="password" id="password" placeholder="password">
+        <button>Sign in</button>
+      </form>
+      <div class="login-text">
+        <a>Create Account</a>
+        <a>Forgot Password?</a>
       </div>
-  </body>
+      <p>By signing in or creating an account, you agree with our <span class="blue-text">Terms & conditions</span> and <span class="blue-text">Privacy statement</span></p>
+    </div>
+  </div>
+  <img src="images/loginPageBackground.svg" alt="" id="background-login">
+</body>
+
 </html>
