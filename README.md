@@ -6,6 +6,10 @@ yellow -> #FDDB32
 orange -> #FF690F  
 light-text -> #6A6A6A  
 
+## Screenshots
+### Login Page
+![login page screenshot](/images/screenshots/login.png)
+
 ## Git Notes - for team members
 
 | Description   | Command |
