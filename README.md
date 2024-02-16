@@ -1,5 +1,11 @@
 # EZStay - Online Hotel and Venue Booking Platform
 > Group 35
+
+## Website Colors
+yellow -> #FDDB32  
+orange -> #FF690F  
+light-text -> #6A6A6A  
+
 ## Git Notes - for team members
 
 | Description   | Command |
