@@ -11,20 +11,20 @@ light-text -> #6A6A6A
 ![login page screenshot](/images/screenshots/login.png)
 
 ## Git Notes - for team members
+| Description                                     | Command                                         |
+|-------------------------------------------------|-------------------------------------------------|
+| Configure username                              | git config --global user.name "[username]"      |
+| Configure email                                 | git config --global user.email "[email address]"|
+| Initiate an empty repository                    | git init                                        |
+| Show modified files in working directory        | git status                                      |
+| Add files to staging area                       | git add . (or git add [filename])               |
+| Commit staged content                           | git commit -m "[commit message]"                |
+| View commit history                             | git log                                         |
+| Restore to a previous commit                    | git reset --hard [commit-hash]                  |
+| Temporary commit (stash)                        | git stash                                       |
+| Retrieve stashed changes                        | git stash pop                                   |
+| Clear all stashed changes                       | git stash clear                                 |
+| Add GitHub repository as remote                 | git remote add origin [github-repo-link]        |
+| Show all attached URLs                          | git remote -v                                   |
+| Pull changes from GitHub repository             | git pull origin main                            |
 
-| Description   | Command |
-|--------------- | --------------- |
-|configure name | `git config --global "[username]"` |
-| configure email | `git config --global "[email address]"` |
-|Initiate an empty repository | `git init`  |
-|Show modified files in working directory,staged for commit | `git status`  |  
-|Adding files to staging area | `git add .` or `git add [filename]`  |
-|Commit your staged content | `git commit -m "[commit message]"`  |
-|View commit history | `git log`  |
-|Restore to a previous commit | ` git reset [commit-hash]` |
-|Temporary Commit(save modified and staged changes) | `git stash` | 
-|Get stashed files back to staging area | `git stash pop`  |
-|Remove stashed files | `git stash clear`  |
-|Adding github repo origin | `git remote add origin [github-repo-link]`  |
-|Show all the URL's attached | `git remote -v` |
-|Pull repository from github | `git pull origin main` |
