@@ -25,3 +25,4 @@ light-text -> #6A6A6A
 |Remove stashed files | `git stash clear`  |
 |Adding github repo origin | `git remote add origin [github-repo-link]`  |
 |Show all the URL's attached | `git remote -v` |
+|Pull repository from github | `git pull origin main` |
