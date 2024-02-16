@@ -14,6 +14,8 @@ light-text -> #6A6A6A
 
 | Description   | Command |
 |--------------- | --------------- |
+|configure name | `git config --global "[username]"` |
+| configure email | `git config --global "[email address]"` |
 |Initiate an empty repository | `git init`  |
 |Show modified files in working directory,staged for commit | `git status`  |  
 |Adding files to staging area | `git add .` or `git add [filename]`  |
