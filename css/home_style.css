@@ -82,11 +82,58 @@ align-items: center;
 
 /* css for sidebar .............*/
 .sidebar{
-    height: 720px;
+    height: 708px;
     width: 17%;
    border: 2px solid black;
    position: fixed;
+   text-align: center;
+   /* padding: 10px 10px; */
    
+   
+}
+
+.icon-info{
+    font-size: larger;
+    font-weight: 1000;
+    margin-right: 50px;
+}
+
+.iconbtn-1{
+  background-color: white;
+  margin: 29px 0px;
+  border-radius: 10px;
+  padding: 5px;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.iconbtn-2{
+  background-color: white;
+  margin: 17px 0px;
+  border-radius: 10px;
+  padding: 5px;
+  border: none;
+ margin-left: 0px;
+}
+
+
+.iconbtn-1:hover{
+    background-color: rgb(184, 177, 177);
+}
+
+.iconbtn-2:hover{
+    background-color: rgb(184, 177, 177);
+}
+.items-1 i{
+    font-size: 32px;
+    margin: 0px 34px 0px 24px;
+   
+}
+.items-2 i{
+    font-size: 32px;
+    margin: 0px 0px 0px 0px;
    
 }
 /* sidebar ends ................. */
@@ -148,4 +195,8 @@ footer{
     height: 100%;
     width: auto;
     border: 1px solid pink;
+}
+
+.hidden{
+   display: none;
 }
