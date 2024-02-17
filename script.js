@@ -7,9 +7,13 @@ const iconbtn = document.querySelectorAll('.iconbtn-1');
 const items = document.querySelectorAll('.items-1');
 
 
+// signIn button
+const signInBtn = document.querySelector('.sign-in-btn');
+signInBtn.addEventListener('click',()=>{
+  window.location.href = './login.html';
+})
+
 var count = 0;
-
-
 menu.addEventListener('click', function(){
 
   if(count == 0){
