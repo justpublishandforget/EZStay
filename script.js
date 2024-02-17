@@ -9,9 +9,10 @@ const items = document.querySelectorAll('.items-1');
 
 // signIn button
 const signInBtn = document.querySelector('.sign-in-btn');
-signInBtn.addEventListener('click',()=>{
-  window.location.href = './login.html';
-})
+signInBtn.addEventListener('click', () => {
+  window.open('./login.html', '_blank');
+});
+
 
 var count = 0;
 menu.addEventListener('click', function(){
