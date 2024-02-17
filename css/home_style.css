@@ -80,24 +80,24 @@ align-items: center;
 }
 
 
-/* sidebar */
+/* css for sidebar .............*/
 .sidebar{
     height: 720px;
     width: 17%;
    border: 2px solid black;
-   /* background-color: aquamarine; */
    position: fixed;
-   /* top: 60px; */
+   
    
 }
+/* sidebar ends ................. */
 
 
-/* mainpage */
+/* css for mainpage.............. */
 .mainpage{
-    /* background-color: bisque; */
+  
     height: 100%;
     width: 83%;
-    /* border: 2px solid red; */
+    border: 1px solid red;
     padding: 20px 30px 10px 30px;
     margin-left: 18%;
 }
@@ -119,27 +119,33 @@ span {
     margin-bottom: 10px;
 }
 
-/* Kerala image */
-.KeralaImage{
+/* big image */
+.bigImage{
     border: 1px solid black;
     height: 17vw;
     margin-top: 25px;
     margin-bottom: 25px;
 }
 
+
+/* css for grid....... */
+
 .card-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(110px, 270px));
-    grid-gap: 2.2rem;
-    /* display: flex;
-    flex-wrap: wrap;
-    gap: 20px; */
+    grid-template-columns: repeat(auto-fit,minmax(110px, 272px));
+    grid-gap: 2rem;
+    
 
 }
 
 .card{
     border: 1px solid black;
-    /* width: 25%; */
     height: 220px;
     
+}
+
+footer{
+    height: 100%;
+    width: auto;
+    border: 1px solid pink;
 }

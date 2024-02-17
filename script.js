@@ -12,16 +12,16 @@ menu.addEventListener('click', function(){
   main.style.width = '95%';
   side.style.width = '5%';
   main.style.marginLeft = '6%';
-  cardContainer.style.gridTemplateColumns = 'repeat(auto-fit,minmax(110px, 254px))';
-  cardContainer.style.gridGap = '1.5rem';
+  cardContainer.style.gridTemplateColumns = 'repeat(auto-fit,minmax(110px, 299px))';
+  cardContainer.style.gridGap = '3.5rem';
   count++;
   }
   else{
     main.style.width = '83%';
   side.style.width = '17%';
   main.style.marginLeft = '18%';
-  cardContainer.style.gridTemplateColumns = 'repeat(auto-fit,minmax(110px, 270px))';
-  cardContainer.style.gridGap = '2.2rem';
+  cardContainer.style.gridTemplateColumns = 'repeat(auto-fit,minmax(110px, 272px))';
+  cardContainer.style.gridGap = '2rem';
   count = 0;
   }
 })
