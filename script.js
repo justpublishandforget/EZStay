@@ -38,7 +38,7 @@ menu.addEventListener('click', function(){
   }
   else{
     main.style.width = '83%';
-  side.style.width = '17%';
+  side.style.width = '15%';
   main.style.marginLeft = '18%';
   cardContainer.style.gridTemplateColumns = 'repeat(auto-fit,minmax(110px, 272px))';
   cardContainer.style.gridGap = '2rem';

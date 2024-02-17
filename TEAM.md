@@ -1,9 +1,11 @@
 # For Team
 
 ## Website Colors
-yellow -> #FDDB32  
-orange -> #FF690F  
-light-text -> #6A6A6A  
+yellow => #FDDB32  
+orange => #FF690F  
+light-text => #6A6A6A  
+light-orange => #FFB534
+light-yellow-with-less-transperency => rgb(255, 240, 167,13%)
 
 ## SiteMap
 ![site map](/images/sitemap.jpeg)
