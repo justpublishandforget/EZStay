@@ -66,101 +66,7 @@ menu.addEventListener("click", function () {
   }
 });
 
-const cards = document.querySelectorAll(".card");
-const cardComment = document.querySelectorAll(".card-comment");
-
 //******************************************************* */
-
-// creating card
-const createCard = () => {
-  const card = document.createElement("div");
-  card.innerHTML = ` <div class="card">
-                          <div class="card-img-scroll">
-                          <img class="card-img" src="./images/HA2.jpg" alt="" />
-                                            <img class="card-img" src="./images/HA1.webp" alt="" />
-                                            <img class="card-img" src="./images/HA3.jpg" alt="" />
-                                            <img class="card-img" src="./images/HA4.jpg" alt="" />
-                                            
-                          </div>
-                    <button class="card-img-scroll-right">></button>
-                    <button class="card-img-scroll-left"><</button>
-
-                    
-                    <button class="card-heart">
-                      <i class="ri-heart-line"></i>
-                    </button>
-
-                    <div class="card-name">
-                      <h4>ITC Grand Chola</h4>
-
-                      <div class="card-rating">
-                        <i class="ri-star-line"></i>
-                        <p>4.9</p>
-                      </div>
-                    </div>
-
-                    <p>Chennai</p>
-                    <p><span>₹ 10,000</span> per night</p>
-
-                    <span class="card-comment">fabulous</span>
-                    </div>`;
-
-  cardContainer.appendChild(card);
-};
-
-for (let i = 0; i < 12; i++) {
-  createCard();
-}
-
-
-// card image scroll
-const cardImgRight = document.querySelector('.card-img-scroll-right');
-const cardImgLeft = document.querySelector('.card-img-scroll-left');
-
-let i = 0; 
-
-cardImgRight.addEventListener('click', () => {
-  const images = document.querySelectorAll('.card-img');
-  console.log(images);
-
-  if (i <3) { 
-    images[i].style.marginLeft = '-272px';
-    i++; 
-    images[i].style.marginLeft = '0'; 
-  }
-});
-
-cardImgLeft.addEventListener('click', () => {
-  const images = document.querySelectorAll('.card-img');
-  console.log(images);
-
-  if (i > 0) { 
-    images[i].style.marginLeft = '272px';
-    i--; 
-    images[i].style.marginLeft = '0'; 
-  }
-});
-
-
-//***************************************************** */
-
-cards.forEach((item, index) => {
-  const Address = item.querySelectorAll("p");
-  item.querySelector("h4").innerText = hotelData[index].hotelName;
-  item.querySelector("p").innerText = hotelData[index].rating;
-  Address[1].innerText = hotelData[index].hotelAddress;
-  item.querySelector("span").innerText = "₹ " + hotelData[index].hotelPrice;
-
-  console.log(item.querySelector("p").innerText);
-  if (item.querySelector("p").innerText < 4.7) {
-    cardComment[index].style.display = "none";
-  }
-
-  const cardHeart = document.querySelectorAll(".card-heart");
-  cardHeart[index].addEventListener("click", () => {
-    window.location.href = "./login.html";
-  });
-});
 
 // json file data
 const hotelData = [
@@ -250,3 +156,104 @@ const hotelData = [
     rating: 4.3,
   },
 ];
+
+
+
+
+
+// creating card
+const createCard = () => {
+  const card = document.createElement("div");
+
+  card.innerHTML = `<div class="card">
+                      <div class="card-img-scroll">
+                          <img class="card-img" src="./images/HA2.jpg" alt="" />
+                          <img class="card-img" src="./images/HA1.webp" alt="" />
+                          <img class="card-img" src="./images/HA3.jpg" alt="" />
+                          <img class="card-img" src="./images/HA4.jpg" alt="" />
+                      </div>
+
+                      <button class="card-img-scroll-right">></button>
+                      <button class="card-img-scroll-left"><</button>
+
+                    
+                      <button class="card-heart">
+                        <i class="ri-heart-line"></i>
+                      </button>
+
+                    <div class="card-name">
+                      <h4>ITC Grand Chola</h4>
+
+                      <div class="card-rating">
+                        <i class="ri-star-line"></i>
+                        <p>4.9</p>
+                      </div>
+                    </div>
+
+                    <p>Chennai</p>
+                    <p><span>₹ 10,000</span> per night</p>
+
+                    <span class="card-comment">fabulous</span>
+                    </div>`;
+
+  cardContainer.appendChild(card);
+};
+
+for (let i = 0; i < 12; i++) {
+  createCard();
+}
+
+// card image scroll
+const cardImgRight = document.querySelector(".card-img-scroll-right");
+const cardImgLeft = document.querySelector(".card-img-scroll-left");
+
+let i = 0;
+
+cardImgRight.addEventListener("click", () => {
+  const images = document.querySelectorAll(".card-img");
+  console.log(images);
+
+  if (i < 3) {
+    images[i].style.marginLeft = "-272px";
+    i++;
+    images[i].style.marginLeft = "0";
+  }
+});
+
+cardImgLeft.addEventListener("click", () => {
+  const images = document.querySelectorAll(".card-img");
+  console.log(images);
+
+  if (i > 0) {
+    images[i].style.marginLeft = "272px";
+    i--;
+    images[i].style.marginLeft = "0";
+  }
+});
+
+//***************************************************** */
+
+const updateCardsWithData = () => {
+  const cards = document.querySelectorAll(".card");
+  const cardComment = document.querySelectorAll(".card-comment");
+
+  cards.forEach((item, index) => {
+    const Address = item.querySelectorAll("p");
+    item.querySelector("h4").innerText = hotelData[index].hotelName;
+    item.querySelector("p").innerText = hotelData[index].rating;
+    Address[1].innerText = hotelData[index].hotelAddress;
+    item.querySelector("span").innerText = "₹ " + hotelData[index].hotelPrice;
+
+    if (item.querySelector("p").innerText < 4.7) {
+      cardComment[index].style.display = "none";
+    }
+
+    const cardHeart = document.querySelectorAll(".card-heart");
+    cardHeart[index].addEventListener("click", () => {
+      window.location.href = "./login.html";
+    });
+  });
+};
+
+updateCardsWithData();
+
