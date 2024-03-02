@@ -204,33 +204,36 @@ for (let i = 0; i < 12; i++) {
 }
 
 // card image scroll
-const cardImgRight = document.querySelector(".card-img-scroll-right");
-const cardImgLeft = document.querySelector(".card-img-scroll-left");
+const cardImgRight = document.querySelectorAll(".card-img-scroll-right");
+const cardImgLeft = document.querySelectorAll(".card-img-scroll-left");
 
-let i = 0;
 
-cardImgRight.addEventListener("click", () => {
-  const images = document.querySelectorAll(".card-img");
-  console.log(images);
 
-  if (i < 3) {
-    images[i].style.marginLeft = "-272px";
-    i++;
-    images[i].style.marginLeft = "0";
-  }
-});
-
-cardImgLeft.addEventListener("click", () => {
-  const images = document.querySelectorAll(".card-img");
-  console.log(images);
-
-  if (i > 0) {
-    images[i].style.marginLeft = "272px";
-    i--;
-    images[i].style.marginLeft = "0";
-  }
-});
-
+for(let cardNo = 0; cardNo < 12; cardNo++){
+  let i = 0;
+  cardImgRight[cardNo].addEventListener("click", () => {
+    const images = document.querySelectorAll(".card-img");
+    console.log(images[0]);
+  
+    if (i < 3) {
+      images[(cardNo*4)+i].style.marginLeft = "-272px";
+      i++;
+      images[(cardNo*4)+i].style.marginLeft = "0";
+    }
+  });
+  
+  cardImgLeft[cardNo].addEventListener("click", () => {
+    const images = document.querySelectorAll(".card-img");
+    console.log(images);
+  
+    if (i > 0) {
+      images[(cardNo*4)+i].style.marginLeft = "272px";
+      i--;
+      images[(cardNo*4)+i].style.marginLeft = "0";
+    }
+  });
+  
+}
 //***************************************************** */
 
 const updateCardsWithData = () => {
