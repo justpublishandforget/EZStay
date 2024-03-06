@@ -10,10 +10,10 @@
 </head>
 
 <body>
-    <div id="section-1">
+    <section id="section-1">
         <nav>
             <img src="images/logo.svg" alt="EZStay logo">
-            <button>Sign in</button>
+            <button type="submit" class="btn">Log in</button>
         </nav>
         <div class="container">
             <div class="text">
@@ -31,9 +31,57 @@
                     <br>
                     <li><span>✓</span> Full control over your property and finances</li>
                 </ul>
+                <button type="submit" class="btn btn-register">Register</button>
             </div>
         </div>
+        </div>
+
+        <div class="form-container hidden">
+            <h2>Hotel Login</h2>
+            <form>
+                <label for="hotelID">Hotel ID</label>
+                <input type="text" id="hotelName" name="hotelName" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="btn btn-register">Register</button>
+            </form>
+    </section>
+
+    <section id="section-2">
+        <div class="container">
+            <img src="images/imggrp.png" alt="" height="400px">
+            <div class="text">
+                <h1>Get quality<br>Booking easily on<br>on EZStay.com</h1>
+                <p>Get quality booking easily through <br>thousands of daily active users</p>
+            </div>
+        </div>
+    </section>
+    <div class="overlay hidden">
     </div>
+    <script>
+        const overlay = document.querySelector('.overlay');
+        const signBtn = document.querySelector('.btn');
+        const formContainer = document.querySelector('.form-container');
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && !formContainer.classList.contains('hidden')) {
+                overlay.classList.add('hidden');
+                formContainer.classList.add('hidden');
+            }
+        });
+
+        signBtn.addEventListener('click', function () {
+            overlay.classList.remove('hidden');
+            formContainer.classList.remove('hidden');
+        });
+
+        overlay.addEventListener('click', function () {
+            overlay.classList.add('hidden');
+            formContainer.classList.add('hidden');
+        })
+    </script>
 </body>
 
 </html>
