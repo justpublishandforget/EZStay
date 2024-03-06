@@ -60,8 +60,17 @@ nav>img {
 }
 
 /* Section-1 Styles */
-#section-1 {
-  background-color: white;
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
+  bottom: -240px;
+  width: 100%;
 }
 
 .container {
@@ -71,6 +80,14 @@ nav>img {
   align-items: center;
 }
 
+.glass {
+  margin-top: 7vh;
+  width: 80%;
+  padding: 70px 10px;
+  backdrop-filter: blur(18px);
+  border-radius: 25px;
+  box-shadow: 2px 4px 12px rgba(21, 21, 21, 0.25);
+}
 .text {
   color: #333333;
 }
@@ -88,7 +105,7 @@ nav>img {
 .register {
   padding: 2vh 3vw;
   max-width: 30vw;
-  background-color: rgb(255, 240, 167, 13%);
+  background-color: white;
   border-radius: 10px;
   box-shadow: 2px 2px 12px rgb(0, 0, 0, 25%);
 }
