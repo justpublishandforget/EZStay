@@ -71,89 +71,113 @@ menu.addEventListener("click", function () {
 // json file data
 const hotelData = [
   {
+    hotelId: 1,
     hotelName: "ITC Chola",
     hotelAddress: "Chennai",
     hotelPrice: 10000,
     imageLink: "https://example.com/itc_chola_image.jpg",
     rating: 4.5,
+    flag: 0
   },
   {
+    hotelId: 2,
     hotelName: "Taj Mahal Palace",
     hotelAddress: "Mumbai",
     hotelPrice: 15000,
     imageLink: "https://example.com/taj_mahal_palace_image.jpg",
     rating: 4.8,
+    flag: 0
   },
   {
+    hotelId: 3,
     hotelName: "The Leela Palace",
     hotelAddress: "Delhi",
     hotelPrice: 12000,
     imageLink: "https://example.com/leela_palace_image.jpg",
     rating: 4.6,
+    flag: 0
   },
   // Add ratings for other hotels as well
   {
+    hotelId: 4,
     hotelName: "JW Marriott",
     hotelAddress: "Bangalore",
     hotelPrice: 11000,
     imageLink: "https://example.com/jw_marriott_image.jpg",
     rating: 4.7,
+    flag: 0
   },
   {
+    hotelId: 5,
     hotelName: "Oberoi Grand",
     hotelAddress: "Kolkata",
     hotelPrice: 9000,
     imageLink: "https://example.com/oberoi_grand_image.jpg",
     rating: 4.3,
+    flag: 0
   },
   {
+    hotelId: 6,
     hotelName: "Ritz-Carlton",
     hotelAddress: "Goa",
     hotelPrice: 18000,
     imageLink: "https://example.com/ritz_carlton_image.jpg",
     rating: 4.9,
+    flag: 0
   },
   {
+    hotelId: 7,
     hotelName: "Hyatt Regency",
     hotelAddress: "Pune",
     hotelPrice: 9500,
     imageLink: "https://example.com/hyatt_regency_image.jpg",
     rating: 4.4,
+    flag: 0
   },
   {
+    hotelId: 8,
     hotelName: "Sheraton Grand",
     hotelAddress: "Hyderabad",
     hotelPrice: 10500,
     imageLink: "https://example.com/sheraton_grand_image.jpg",
     rating: 4.5,
+    flag: 0
   },
   {
+    hotelId: 9,
     hotelName: "Four Seasons",
     hotelAddress: "Mumbai",
     hotelPrice: 16000,
     imageLink: "https://example.com/four_seasons_image.jpg",
     rating: 4.7,
+    flag: 0
   },
   {
+    hotelId: 10,
     hotelName: "Radisson Blu",
     hotelAddress: "Jaipur",
     hotelPrice: 8500,
     imageLink: "https://example.com/radisson_blu_image.jpg",
     rating: 4.2,
+    flag: 0
   },
   {
+    hotelId: 11,
     hotelName: "Marriott Marquis",
     hotelAddress: "Ahmedabad",
     hotelPrice: 10000,
     imageLink: "https://example.com/marriott_marquis_image.jpg",
     rating: 4.4,
+    flag: 0
   },
   {
+    hotelId: 12,
     hotelName: "Hilton Garden Inn",
     hotelAddress: "Chandigarh",
     hotelPrice: 9500,
     imageLink: "https://example.com/hilton_garden_inn_image.jpg",
     rating: 4.3,
+    flag: 0
   },
 ];
 
@@ -174,7 +198,7 @@ const createCard = () => {
 
                     
                       <button class="card-heart">
-                        <i class="ri-heart-line"></i>
+                      <i class="ri-heart-fill"></i>
                       </button>
 
                     <div class="card-name">
@@ -234,6 +258,7 @@ const CardImageScroll = (marginValue) => {
 CardImageScroll(272);
 
 //***************************************************** */
+const bookmarked=[];
 
 const updateCardsWithData = () => {
   const cards = document.querySelectorAll(".card");
@@ -250,14 +275,76 @@ const updateCardsWithData = () => {
       cardComment[index].style.display = "none";
     }
 
+  //  Bookmark js
+
     const cardHeart = document.querySelectorAll(".card-heart");
     cardHeart[index].addEventListener("click", () => {
-      window.location.href = "./login.html";
+    
+const foundElement = hotelData.find(element => element.hotelId === index+1);
+if (foundElement !== undefined && foundElement.flag === 0) {
+  bookmarked.push(foundElement);
+    console.log(bookmarked);
+    foundElement.flag = 1;
+    cardHeart[index].querySelector('i').style.color = "black";
+} else {
+   if(foundElement.flag === 1){
+    foundElement.flag =0;
+    const indexToRemove = bookmarked.findIndex(element => element.hotelId === foundElement.hotelId);
+    if (indexToRemove !== -1) {
+        bookmarked.splice(indexToRemove, 1);
+      console.log(bookmarked);
+      cardHeart[index].querySelector('i').style.color = "rgba(0, 0, 0, 0.3)";
+      
+      
+    }
+  }
+}
+
     });
   });
 };
 
 updateCardsWithData();
+
+
+const modal = document.querySelector('.modal');
+const bookmark = document.querySelector('.bookmark');
+const close = document.querySelector('.close-modal')
+
+bookmark.addEventListener('click', function(){
+  
+  modal.classList.toggle('hidden');
+  close.classList.toggle('hidden');
+  
+  modal.innerHTML = '';
+
+  // Iterate over bookmarked array and create HTML elements
+  bookmarked.forEach(item => {
+    const bookmarkedItem = document.createElement('div');
+    bookmarkedItem.classList.add('bookmarked-item');
+    bookmarkedItem.innerHTML = `
+    
+      <p>${item.hotelName}</p>
+      <p><i class="ri-map-pin-fill"></i> ${item.hotelAddress}</p>
+      <p>₹ ${item.hotelPrice}</p>
+      <p>&#11088;${item.rating}</p>
+      
+      <!-- Add more details as needed -->
+    `;
+    modal.appendChild(bookmarkedItem);
+  });
+
+})
+
+const closemodal = function(){
+  close.classList.add('hidden');
+  modal.classList.add('hidden');
+}
+
+close.addEventListener('click', closemodal);
+main.addEventListener('click', closemodal);
+
+
 
 //************************************************* */
 // Drop down for guest in search bar
