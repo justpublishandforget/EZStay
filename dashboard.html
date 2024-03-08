@@ -1,104 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="./css/dashboard.css">
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./css/dashboard.css">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
 
-  <body>
-    <div class="sidebar">
-      <div class="logo">
-        <img src="images/logo.svg" alt="">
-      </div>
-      <ul class="menu">
-        <li class="active">
-          <a href="#">
-            <i class="fas fa-tachometer-alt"></i>
-            <span>Dashboard</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fas fa-user"></i>
-            <span>Profile</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fas fa-chart-bar"></i>
-            <span>Statistics</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fas fa-question-circle"></i>
-            <span>FAQ</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fas fa-star"></i>
-            <span>Reviews</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fas fa-cog"></i>
-            <span>Setting</span>
-          </a>
-        </li>
-        <li class="logout">
-          <a href="#">
-            <i class="fas fa-sign-out-alt"></i>
-            <span>Sign Out</span>
-          </a>
-        </li>
-      </ul>
+<body>
+  <div class="sidebar">
+    <div class="logo">
+      <img src="images/logo.svg" alt="">
     </div>
+    <ul class="menu">
+      <li class="active">
+        <a href="#">
+          <i class="fas fa-tachometer-alt"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-chart-bar"></i>
+          <span>Statistics</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-question-circle"></i>
+          <span>FAQ</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-star"></i>
+          <span>Reviews</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-cog"></i>
+          <span>Setting</span>
+        </a>
+      </li>
+      <li class="logout">
+        <a href="#">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Sign Out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
 
-    <main>
-      <div class="header-wrapper">
-        <div class="header-title">
-          <h1>Admin Booking Dashboard</h1>
+  <main>
+    <div class="header-wrapper">
+      <div class="header-title">
+        <h1>Hotel Admin Dashboard</h1>
 
+      </div>
+      <div class="search">
+        <input type="text" name="search" placeholder="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+    <div class="info-cards-container">
+      <div class="info-card">
+        <div class="info-header">
+          <p>New Bookings</p>
+          <div class="pill">
+            <span class="circle">◭</span>
+            <p>20%</p>
+          </div>
         </div>
-        <div class="search">
-          <input type="text" name="search" placeholder="Search">
-          <i class="fa-solid fa-magnifying-glass"></i>
+        <h1>24</h1>
+        <h4>Details ></h4>
+      </div>
+      <div class="info-card">
+        <div class="info-header">
+          <p>Total Revenue</p>
+          <div class="pill">
+            <span class="circle">₹</span>
+            <p>20%</p>
+          </div>
+          <h1>₹ 10,00,000</h1>
+          <h4>Details ></h4>
         </div>
       </div>
-      <div class="info-cards-container">
-        <div class="info-card">
-          <div class="info-header">
-            <div class= "pill"> 
-
-            </div>
+      <div class="info-card">
+        <div class="info-header">
+          <p>Total Customers</p>
+          <div class="pill">
+            <span class="circle">Ħ</span>
+            <p>20%</p>
           </div>
-        </div> 
-        <div class="info-card">
-          <div class="info-header">
-            <div class= "pill"> 
-            </div>
-          </div>
-        </div> 
-        <div class="info-card">
-          <div class="info-header">
-            <div class= "pill"> 
-
-            </div>
-          </div>
-        </div> 
+        </div>
+        <h1>10,000</h1>
+        <h4>Details ></h4>
       </div>
-      <div class="recent">
-
+    </div>
+    <div class="extra-info">
+      <div class="recent ex-card">
+        <h1>Recent Bookings</h1>
+        <div class="booking">
+          <p>Booking Name</p>
+          <p>Status</p>
+          <p>Payment Mode</p>
+        </div>
+        <div class="booking">
+          <p>Harsh</p>
+          <div class="status booked">Booked</div>
+          <p>UPI</p>
+        </div>
+        <div class="booking">
+          <p>Vedant</p>
+          <div class="status canceled">Canceled</div>
+          <p>Credit</p>
+        </div>
+        <div class="booking">
+          <p>Satish</p>
+          <div class="status pending">Pending</div>
+          <p>NA</p>
+        </div>
+        <div class="booking">
+          <p>Ateeb</p>
+          <div class="status booked">Booked</div>
+          <p>Cash</p>
+        </div>
       </div>
-    </main>
+      <div class="recent ex-card"></div>
+    </div>
+  </main>
 
-    <script src="https://kit.fontawesome.com/5050694ff5.js" crossorigin="anonymous"></script>
-  </body>
+  <script src="https://kit.fontawesome.com/5050694ff5.js" crossorigin="anonymous"></script>
+</body>
 
 </html>

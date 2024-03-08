@@ -2,161 +2,267 @@
 
 /* Reset Styles */
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-} 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 
 body {
-  display: flex;
-  background-color: #fcfcfc;
+    display: flex;
+    background-color: #fbfbfb;
 }
 
 .sidebar {
-  position: sticky;
-  top: 0;
-  left: 0;
-  bottom: 0;  
-  width: 270px;
-  height: 100vh;
-  padding: 1vh 1.7rem;
-  color: white;
-  overflow: hidden;
-  border-right: 1px solid #cfcaca;
-  transition: all 0.3s linear;
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 270px;
+    height: 100vh;
+    padding: 1vh 1.7rem;
+    color: white;
+    overflow: hidden;
+    border-right: 1px solid #cfcaca;
+    transition: all 0.3s linear;
 }
 
-/* .sidebar:hover {
-width: 240px;
-transition: 0.3s;
-} */
 .logo {
-  margin-top: 5px;
-  height: 80px;
-  padding: 10px 10px;
-  /* background-color: white;
-border-radius: 35px; */
+    margin-top: 5px;
+    height: 80px;
+    padding: 10px 10px;
 }
 
 .logo img {
-  height: 40px;
+    height: 40px;
 }
+
 .menu {
-  height: 88%;
-  position: relative;
-  list-style: none;
-  padding: 0;
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
 }
 
 .menu li {
-  padding: 1.2rem;
-  margin: 10px 0;
-  border-radius: 8px;
-  transition: all 0.5s ease-in-out;
+    padding: 1.2rem;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
 }
 
 .menu li:hover,
-.active{
-  background-color: #dddddd;
+.active {
+    background-color: #fbf8d4;
 }
 
 .menu a {
-  color: #222222;
-  font-size: 14px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.menu a span {
-  overflow: hidden;
+    color: #222222;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .menu a i {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 .logout {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 main {
-  position: relative;
-  padding:1vh 1vw;
-  width: 100%;
+    position: relative;
+    padding: 1vh 1vw;
+    width: 100%;
 }
 
 .header-wrapper {
-  display: flex;
-  justify-content:space-between;
-  align-items:center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header-wrapper h1{
-  padding:1vh 1vw;
-  font-weight:600;
+.header-wrapper h1 {
+    padding: 1vh 1vw;
+    font-weight: 600;
 }
 
 .search {
-  margin: 0 2vw;
-  padding: 1.5vh 1.5vw;
-  border: 1px solid #cfcaca;
-  border-radius: 30px;
-  box-shadow: 1px 1px 5px #d4d4d4;
+    margin: 0 2vw;
+    padding: 1.5vh 1.5vw;
+    border-radius: 30px;
+    box-shadow: 1px 1px 20px #d4d4d4;
 }
 
 .search input {
-  border:none;
+    border: none;
 }
 
 .info-cards-container {
-  margin-top: 4vh;
-  padding: 2vh 2vw;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 1.5vw;
+    margin-top: 4vh;
+    padding: 2vh 2vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.5vw;
 }
 
 .info-card {
-  height: 20vh;
-  background-color: white;
-  border-radius: 25px;
-  box-shadow: 1px 1px 10px #d4d4d4;
+    position: relative;
+    height: 20vh;
+    padding: 2vh 2vw 0vh 2vw;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 1px 1px 20px #d4d4d4;
+    transition: all 0.5s linear;
 }
 
-.recent {
-  height: 30vh;
-  margin: 1vh 2vw;
-  background-color: white;
-  border-radius: 25px;
-  box-shadow: 1px 1px 10px #d4d4d4;
+.info-card:hover,
+.search:hover,
+.ex-card:hover {
+    box-shadow: 2px 2px 40px #a0a0a0;
+    transition: 0.5s;
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-header>p {
+    font-weight: 500;
+    color: #777777;
+}
+
+.pill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    text-align: right;
+    /* padding: 5px 10px; */
+    height: 30px;
+    width: 80px;
+    border-radius: 20px;
+
+}
+
+.info-card:nth-child(1) .pill {
+    background-color: #fdc667;
+}
+
+.info-card:nth-child(2) .pill {
+    background-color: #fea087;
+}
+
+.info-card:nth-child(3) .pill {
+    background-color: #b2deff;
+}
+
+.info-card:nth-child(1) .circle {
+    background-color: #FFB534;
+}
+
+.info-card:nth-child(2) .circle {
+    background-color: #fe7f5b;
+}
+
+.info-card:nth-child(3) .circle {
+    background-color: #6ccbea;
+}
+
+.circle {
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.pill p {
+    margin-right: 7px;
+    color: #fff;
+}
+
+.info-card h1 {
+    position: absolute;
+    bottom: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1f1f1f;
 }
 
 
+.info-card h4 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-right: 27px;
+    color: #6335eb;
+}
 
+.extra-info {
+    margin: 1vh 2vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1.5vw;
+}
 
+.ex-card {
+    height: 55vh;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 1px 1px 20px #d4d4d4;
+}
 
+.ex-card h1 {
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    margin-bottom: 20px;
+    color: #1f1f1f;
+}
 
+.booking {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 1rem;
+    margin:0px 20px 10px 20px;
+    width: 93%;
+    border-radius: 16px;
+    background-color: #fbfbfb;
+    /* box-shadow: 0px 0px 4px #d4d4d4; */
+}
 
+.status {
+    padding: 0.2rem 1rem;
+    border-radius: 25px;
+    border: 1px solid;
+}
 
+.canceled {
+    color: #ac361c;
+    background-color: #fd28281d;
+    border-color: #ac361c;
+}
 
+.booked {
+    color: #1cac70;
+    background-color: #42ef9822;
+    border-color: #1cac70;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.pending {
+    color: #3b98b6;
+    background-color: #35aeeb28;
+    border-color: #3b98b6;
+}
