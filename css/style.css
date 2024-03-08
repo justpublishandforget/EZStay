@@ -20,11 +20,7 @@ nav {
     border: 1px solid #bcbcbc;
     border-right: 0;
     display: flex;
-<<<<<<< HEAD
     
-=======
-    /* position: relative; */
->>>>>>> 832685e89112856a10243cf9c1df822c5bd3e727
     padding: 10px 0;
     justify-content: space-between;
     position: fixed;
