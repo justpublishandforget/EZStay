@@ -20,11 +20,12 @@ nav {
     border: 1px solid #bcbcbc;
     border-right: 0;
     display: flex;
-    /* position: relative; */
+    
     padding: 10px 0;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     z-index: 1;
+    width: 100%;
     top: 0;
     width: 100%;
     /* margin-top: -10%; */
@@ -86,6 +87,7 @@ nav {
 
 /* css for sidebar .............*/
 .sidebar {
+    margin-top: 60px;
     height: 95vh;
     width: 15%;
     border: 1px solid #bcbcbc;
@@ -149,6 +151,7 @@ nav {
 
 /* css for mainpage.............. */
 .mainpage {
+    margin-top: 60px;
     height: 100%;
     width: 83%;
     color: #333333;
@@ -158,7 +161,7 @@ nav {
 }
 
 /* title of page */
-span {
+.mainpage span {
     font-size: 2vw;
     font-weight: 500;
 }
@@ -217,6 +220,46 @@ span {
     background-color: rgb(241, 147, 65);
     border: none;
 }
+
+/* ******************************************************* */
+.guest-box{
+    position: absolute;
+    top: 14vw;
+    right: 13vw;
+    background-color: white;
+    margin-left: 100px;
+    width: 300px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.1);
+
+
+}
+.guestIncr i{
+    font-size: 20px;
+    color: rgb(175, 175, 175);
+}
+
+.guest-adult{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 15px;
+}
+.guestIncr{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.noOfGuest{
+    width: 10px;
+    font-size: 18px;
+}
+.hr{
+    margin: 5px 10px 0px 10px;
+}
+
+/* ************************************************************ */
 
 
 
@@ -290,14 +333,12 @@ span {
     
 }
 
+
 .card-img-scroll-right{
     position: absolute;
     top: 85px;
     right: 10px;
 }
-
-
-
 .card-img-scroll-left{
     position: absolute;
     top: 85px;
@@ -349,6 +390,21 @@ span {
     position: absolute;
     bottom: 3px;
     right: 10px;
+}
+
+
+
+/* card buttons left and right */
+.card-img-scroll-left, .card-img-scroll-right{
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffffff56;
 }
 
 

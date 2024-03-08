@@ -181,10 +181,6 @@ const hotelData = [
   },
 ];
 
-
-
-
-
 // creating card
 const createCard = () => {
   const card = document.createElement("div");
@@ -231,33 +227,36 @@ for (let i = 0; i < 12; i++) {
 const cardImgRight = document.querySelectorAll(".card-img-scroll-right");
 const cardImgLeft = document.querySelectorAll(".card-img-scroll-left");
 
+const CardImageScroll = (marginValue) => {
+  for (let cardNo = 0; cardNo < 12; cardNo++) {
+    let i = 0;
+    cardImgRight[cardNo].addEventListener("click", () => {
+      const images = document.querySelectorAll(".card-img");
+      console.log(images[0]);
 
+      if (i < 3) {
+        images[cardNo * 4 + i].style.marginLeft = `-${marginValue}px`;
+        i++;
+        images[cardNo * 4 + i].style.marginLeft = "0";
+      }
+    });
 
-for(let cardNo = 0; cardNo < 12; cardNo++){
-  let i = 0;
-  cardImgRight[cardNo].addEventListener("click", () => {
-    const images = document.querySelectorAll(".card-img");
-    console.log(images[0]);
-  
-    if (i < 3) {
-      images[(cardNo*4)+i].style.marginLeft = "-272px";
-      i++;
-      images[(cardNo*4)+i].style.marginLeft = "0";
-    }
-  });
-  
-  cardImgLeft[cardNo].addEventListener("click", () => {
-    const images = document.querySelectorAll(".card-img");
-    console.log(images);
-  
-    if (i > 0) {
-      images[(cardNo*4)+i].style.marginLeft = "272px";
-      i--;
-      images[(cardNo*4)+i].style.marginLeft = "0";
-    }
-  });
-  
-}
+    cardImgLeft[cardNo].addEventListener("click", () => {
+      const images = document.querySelectorAll(".card-img");
+      console.log(images);
+      console.log(images);
+
+      if (i > 0) {
+        images[cardNo * 4 + i].style.marginLeft = `${marginValue}px`;
+        i--;
+        images[cardNo * 4 + i].style.marginLeft = "0";
+      }
+    });
+  }
+};
+
+CardImageScroll(272);
+
 //***************************************************** */
 const bookmarked=[];
 
@@ -347,3 +346,38 @@ main.addEventListener('click', closemodal);
 
 
 
+//************************************************* */
+// Drop down for guest in search bar
+
+const guestBox = document.querySelector(".guest-box");
+const addGuestBtn = document.querySelectorAll(".addGuest");
+const subGuestBtn = document.querySelectorAll(".subGuest");
+const noOfGuests = document.querySelectorAll(".noOfGuest");
+const Who = document.querySelector(".Who");
+
+addGuestBtn.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    noOfGuests[index].innerHTML++;
+  });
+});
+
+subGuestBtn.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    if (noOfGuests[index].innerHTML > 0) {
+      noOfGuests[index].innerHTML--;
+    }
+  });
+});
+
+let flag = 0;
+guestBox.style.display = "none";
+
+Who.addEventListener("click", () => {
+  if (flag === 0) {
+    guestBox.style.display = "block";
+    flag = 1;
+  } else if (flag === 1) {
+    guestBox.style.display = "none";
+    flag = 0;
+  }
+});

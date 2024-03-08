@@ -1,69 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EZStay</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EZStay</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/css/style.css" />
-  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
-</head>
-<body>
-  <!-- Navigation Bar Start -->
-  <nav>
-    <!-- Left side of navigation bar -->
-    <div class="nav-leftside">
-      <button class="menu"><i class="ri-menu-line"></i></button>
-      <img class="logo" src="/images/logo.svg" alt="img" />
-    </div>
-
-    <!-- Right side of navigation bar -->
-    <div class="nav-rightside">
-      <div class="bookmark">
-        <i class="ri-heart-fill"></i>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar Start -->
+    <nav>
+      <!-- Left side of navigation bar -->
+      <div class="nav-leftside">
+        <button class="menu"><i class="ri-menu-line"></i></button>
+        <img class="logo" src="/images/logo.svg" alt="img" />
       </div>
+
+      <!-- Right side of navigation bar -->
+      <div class="nav-rightside">
+        <div class="bookmark">
+        <i class="ri-heart-fill"></i>
+        </div>
       <button class="btn sign-in-btn">Sign in</button>
-    </div>
-  </nav>
-  <!-- Navigation Bar End -->
+      </div>
+    </nav>
+    <!-- Navigation Bar End -->
 
   
-  <!-- Section -->
-  <section class="p1">
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <div id="item-container">
-        <div class="items-1">
-          <button class="iconbtn-1"><i class="ri-account-circle-fill"></i><p class="icon-info">Sign in</p></button>
-        </div>
-        <div class="items-1">
-          <button class="iconbtn-1"><i class="ri-compass-3-fill"></i><p class="icon-info">Explore</p></button>
-        </div>
-        <div class="items-1">
-          <button class="iconbtn-1"><i class="ri-hotel-bed-fill"></i><p class="icon-info">Stays</p></button>
-        </div>
-        <div class="items-1">
-          <button class="iconbtn-1"><i class="ri-hotel-line"></i><p class="icon-info">Hotels</p></button>
-        </div>
-        <div class="items-1">
-          <button class="iconbtn-1"><i class="ri-briefcase-fill"></i><p class="icon-info">Business</p></button>
-        </div>
-        <div class="items-1">
-          <button class="iconbtn-1"><i class="ri-heart-fill"></i><p class="icon-info">Trips</p></button>
-        </div>
-        <div class="items-1">
-          <button class="iconbtn-1"><i class="ri-feedback-fill"></i><p class="icon-info">Feedback</p></button>
-        </div>
-        <div class="items-1">
-          <button class="iconbtn-1"><i class="ri-global-line"></i><p class="icon-info">Sign in</p></button>
-        </div>
-        <div class="items-1">
-          <button class="iconbtn-1"><i class="ri-global-line"></i><p class="icon-info">Sign in</p></button>
+    <!-- Section -->
+    <section class="p1">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div id="item-container">
+          <div class="items-1">
+            <button class="iconbtn-1">
+              <i class="ri-account-circle-fill"></i>
+              <p class="icon-info">Sign in</p>
+            </button>
+          </div>
+          <div class="items-1">
+            <button class="iconbtn-1">
+              <i class="ri-compass-3-fill"></i>
+              <p class="icon-info">Explore</p>
+            </button>
+          </div>
+          <div class="items-1">
+            <button class="iconbtn-1">
+              <i class="ri-hotel-bed-fill"></i>
+              <p class="icon-info">Stays</p>
+            </button>
+          </div>
+          <div class="items-1">
+            <button class="iconbtn-1">
+              <i class="ri-hotel-line"></i>
+              <p class="icon-info">Hotels</p>
+            </button>
+          </div>
+          <div class="items-1">
+            <button class="iconbtn-1">
+              <i class="ri-briefcase-fill"></i>
+              <p class="icon-info">Business</p>
+            </button>
+          </div>
+          <div class="items-1">
+            <button class="iconbtn-1">
+              <i class="ri-heart-fill"></i>
+              <p class="icon-info">Trips</p>
+            </button>
+          </div>
+          <div class="items-1">
+            <button class="iconbtn-1">
+              <i class="ri-feedback-fill"></i>
+              <p class="icon-info">Feedback</p>
+            </button>
+          </div>
+          <div class="items-1">
+            <button class="iconbtn-1">
+              <i class="ri-global-line"></i>
+              <p class="icon-info">Sign in</p>
+            </button>
+          </div>
+          <div class="items-1">
+            <button class="iconbtn-1">
+              <i class="ri-global-line"></i>
+              <p class="icon-info">Sign in</p>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
 
     <!-- Main Page -->
 <!-- pop up window -->
@@ -76,55 +106,89 @@
     <div class="mainpage">
       <span>Discover your new favourite stay</span>
 
-      <!-- Search, Date, Time Booking Bar -->
-      <div class="search">
-        <form action="">
+        <!-- Search, Date, Time Booking Bar -->
+        <div class="search">
+          <form action="">
+            <div class="search-bar-divs">
+              <label>Where</label>
+              <input type="text" placeholder="Destination" />
+            </div>
 
-          <div class="search-bar-divs">
-            <label>Where</label>
-            <input type="text" placeholder="Destination">
+            <div class="search-bar-divs">
+              <label>Check in</label>
+              <input type="date" placeholder="Add dates" />
+            </div>
+
+            <div class="search-bar-divs">
+              <label>Check out<output></output></label>
+              <input type="date" placeholder="add dates" />
+            </div>
+
+            <div class="search-bar-divs Who">
+              <label>Who</label>
+              <input type="text" placeholder="guest" />
+              <!--             
+            <select name="adults" id="adults">
+              <option value="1"> Adult (Age 13 or above)</option>
+              <option value="2"> Children (Ages 2–12)</option>
+              <option value="3"> Infants (Under 2)</option>
+            </select> -->
+            </div>
+
+            <div>
+              <button class="search-logo" type="submit">
+                <i class="ri-search-line"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="bigImage">
+          <img class="hero-img" src="./images/kerala-image.png" alt="" />
+          <p class="bigImage-text">
+            EZStay <br />
+            Where comfort meets clicks, <br />
+            and your dream stay is just <br />
+            a tap away ! <br />
+          </p>
+        </div>
+        <h2>Hotels near you</h2>
+
+        <div class="card-container"></div>
+
+        <!-- Drop down on guest in search bar -->
+        <div class="guest-box">
+          <div class="guest-adult">
+            <div>
+              <h4>Adult</h4>
+              <p>Ages 13 or above</p>
+            </div>
+
+            <div class="guestIncr">
+              <i class="ri-add-circle-line subGuest "></i>
+              <p class="noOfGuest">1</p>
+              <i class="ri-add-circle-line addGuest"></i>
+            </div>
           </div>
 
-          <div class="search-bar-divs">
-            <label>Check in</label>
-            <input type="date" placeholder="Add dates">
+          <hr class="hr"/>
+
+          <div class="guest-adult">
+            <div>
+              <h4>Children</h4>
+              <p>Below 13</p>
+            </div>
+
+            <div class="guestIncr">
+              <i class="ri-add-circle-line subGuest"></i>
+              <p class="noOfGuest">1</p>
+              <i class="ri-add-circle-line addGuest"></i>
+            </div>
           </div>
+        </div>
 
-          <div class="search-bar-divs">
-            <label>Check out<output></output></label>
-            <input type="date" placeholder="add dates">
-          </div>
-
-          <div class="search-bar-divs">
-            <label>Who</label>
-            <input type="text" placeholder="guest">
-          </div>
-
-          <div>
-            <button class="search-logo" type="submit"><i class="ri-search-line"></i></button>
-          </div>
-
-         
-        </form>
-
-
-
-      </div>
-
-      <div class="bigImage">
-        <img class="hero-img" src="./images/kerala-image.png" alt="" />
-        <p class="bigImage-text">
-          EZStay <br />
-          Where comfort meets clicks, <br />
-          and your dream stay is just <br />
-          a tap away ! <br />
-        </p>
-      </div>
-      <h2>Hotels near you</h2>
-
-      <div class="card-container"></div>
-      <!-- Footer -->
-      <!--
+        <!-- Footer -->
+        <!--
       <footer>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
@@ -133,12 +197,11 @@
           iusto expedita.
         </p>
       </footer>
-      -->
-    </div>
-  </section>
-  <!-- End of Section -->
+      --></div>
+    </section>
+    <!-- End of Section -->
 
-  <!-- Script -->
-  <script src="script.js"></script>
-</body>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
 </html>
