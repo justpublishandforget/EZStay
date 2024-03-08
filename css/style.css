@@ -20,12 +20,14 @@ nav {
     border: 1px solid #bcbcbc;
     border-right: 0;
     display: flex;
-    position: relative;
+    /* position: relative; */
     padding: 10px 0;
     justify-content: space-between;
     position: sticky;
     z-index: 1;
     top: 0;
+    width: 100%;
+    /* margin-top: -10%; */
 }
 
 /* logo image */
@@ -44,6 +46,7 @@ nav {
 /* heart image */
 .nav-rightside i {
     font-size: 23px;
+    /* color: red; */
 }
 
 /* sign in button */
@@ -70,7 +73,7 @@ nav {
     font-size: 18px;
     padding: 0 3px;
     background-color: white;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 /* nav bar ends .................. */
@@ -275,6 +278,12 @@ span {
     background-color: #ffffff00;
     border: none;
 }
+
+.card-heart i{
+    
+    color: rgba(0, 0, 0, 0.3);
+}
+
 .card-img-scroll{
     display: flex;
     overflow: hidden;
@@ -357,3 +366,51 @@ footer {
 .hidden {
     display: none;
 }
+
+
+/*  */
+.modal {
+    position: fixed;
+    /* top: 38%; */
+    top: 21%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+    height: 165px;
+    width: 313px;
+
+  
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    overflow: scroll;
+  }
+
+  .close-modal {
+    position: fixed;
+    top: 3.2rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+    z-index: 15;
+  }
+
+  .bookmarked-item {
+    /* border: 1px solid #ccc; */
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .bookmarked-item p {
+    margin: 0;
+  }
+  
+  .bookmarked-item p:first-child {
+    font-weight: bold;
+  }
+  
