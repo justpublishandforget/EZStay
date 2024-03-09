@@ -63,6 +63,8 @@ nav>img {
 
 .main-container {
   display: flex;
+  position: relative;
+  z-index: -1;
   justify-content: center;
 }
 
