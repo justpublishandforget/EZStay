@@ -242,6 +242,7 @@ nav {
 .guest-adult{
     display: flex;
     gap: 10px;
+    margin-top: 10px;
     justify-content: space-between;
     padding: 15px;
 }
@@ -258,6 +259,25 @@ nav {
 .hr{
     margin: 5px 10px 0px 10px;
 }
+.crossCut-guest-box{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 25px;
+    border: none;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+.crossCut-guest-box:hover{
+    background-color: rgb(236, 233, 233);
+    border-radius: 50%;
+}
+
+
 
 /* ************************************************************ */
 

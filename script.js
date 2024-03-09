@@ -16,6 +16,9 @@ signInBtn.addEventListener("click", () => {
 var count = 0;
 menu.addEventListener("click", function () {
   if (count == 0) {
+    guestBox.style.display = "none";
+
+
     main.style.width = "95%";
     side.style.width = "5%";
     main.style.marginLeft = "6%";
@@ -40,6 +43,9 @@ menu.addEventListener("click", function () {
 
     count++;
   } else {
+    // guestBox.style.display = "block";
+
+
     main.style.width = "83%";
     side.style.width = "15%";
     main.style.marginLeft = "18%";
@@ -235,7 +241,7 @@ const CardImageScroll = (marginValue) => {
       console.log(images[0]);
 
       if (i < 3) {
-        images[cardNo * 4 + i].style.marginLeft = `-${marginValue}px`;
+        images[cardNo * 4 + i].style.marginLeft = `-${marginValue}%`;
         i++;
         images[cardNo * 4 + i].style.marginLeft = "0";
       }
@@ -247,7 +253,7 @@ const CardImageScroll = (marginValue) => {
       console.log(images);
 
       if (i > 0) {
-        images[cardNo * 4 + i].style.marginLeft = `${marginValue}px`;
+        images[cardNo * 4 + i].style.marginLeft = `${marginValue}%`;
         i--;
         images[cardNo * 4 + i].style.marginLeft = "0";
       }
@@ -354,6 +360,7 @@ const addGuestBtn = document.querySelectorAll(".addGuest");
 const subGuestBtn = document.querySelectorAll(".subGuest");
 const noOfGuests = document.querySelectorAll(".noOfGuest");
 const Who = document.querySelector(".Who");
+const crossCutGuestBox = document.querySelector(".crossCut-guest-box");
 
 addGuestBtn.forEach((button, index) => {
   button.addEventListener("click", () => {
@@ -381,3 +388,9 @@ Who.addEventListener("click", () => {
     flag = 0;
   }
 });
+
+crossCutGuestBox.addEventListener('click',()=>{
+  guestBox.style.display = "none";
+})
+
+
