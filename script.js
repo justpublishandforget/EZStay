@@ -229,41 +229,53 @@ for (let i = 0; i < 12; i++) {
   createCard();
 }
 
-// card image scroll
-const cardImgRight = document.querySelectorAll(".card-img-scroll-right");
-const cardImgLeft = document.querySelectorAll(".card-img-scroll-left");
-
-const CardImageScroll = (marginValue) => {
-  for (let cardNo = 0; cardNo < 12; cardNo++) {
-    let i = 0;
-    cardImgRight[cardNo].addEventListener("click", () => {
-      const images = document.querySelectorAll(".card-img");
-      console.log(images[0]);
-
-      if (i < 3) {
-        images[cardNo * 4 + i].style.marginLeft = `-${marginValue}%`;
-        i++;
-        images[cardNo * 4 + i].style.marginLeft = "0";
-      }
-    });
-
-    cardImgLeft[cardNo].addEventListener("click", () => {
-      const images = document.querySelectorAll(".card-img");
-      console.log(images);
-      console.log(images);
-
-      if (i > 0) {
-        images[cardNo * 4 + i].style.marginLeft = `${marginValue}%`;
-        i--;
-        images[cardNo * 4 + i].style.marginLeft = "0";
-      }
-    });
-  }
-};
-
-CardImageScroll(272);
-
 //***************************************************** */
+
+// slider ******************************************
+
+const sliders = document.querySelectorAll('.card-img-scroll');
+
+sliders.forEach((slider, index) => {
+const slides = slider.querySelectorAll('.card-img');
+
+let curslide = 0;
+const maxslide = 4;
+
+const btnRight = document.querySelectorAll(".card-img-scroll-right");
+ const btnLeft = document.querySelectorAll(".card-img-scroll-left");
+
+const goToSlide = function(slide){
+  slides.forEach((s, i) => (s.style.transform = `translateX(${100 * (i-slide) }%)`));
+}
+
+goToSlide(0);
+
+const nextslide = function(){
+  if(curslide === maxslide - 1){
+    curslide = 0;
+  } else{
+    curslide++;
+  }
+  goToSlide(curslide);
+}
+
+
+const prevslide = function(){
+  if(curslide === 0){
+    curslide = maxslide-1;
+  } else{
+    curslide--;
+  }
+  goToSlide(curslide);
+}
+
+btnRight[index].addEventListener('click', nextslide);
+btnLeft[index].addEventListener('click', prevslide);
+
+});
+
+// 
+
 const bookmarked=[];
 
 const updateCardsWithData = () => {
