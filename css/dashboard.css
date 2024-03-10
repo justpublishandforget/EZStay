@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
 
 /* Reset Styles */
 * {
@@ -11,6 +10,7 @@
 body {
     display: flex;
     background-color: #fbfbfb;
+    color: #3a3a3a;     
 }
 
 .sidebar {
@@ -18,7 +18,7 @@ body {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 270px;
+    width: 240px;
     height: 100vh;
     padding: 1vh 1.7rem;
     color: white;
@@ -76,7 +76,7 @@ body {
     width: 100%;
 }
 
-main {
+section {
     position: relative;
     padding: 1vh 1vw;
     width: 100%;
@@ -145,7 +145,6 @@ main {
     align-items: center;
     color: #fff;
     text-align: right;
-    /* padding: 5px 10px; */
     height: 30px;
     width: 80px;
     border-radius: 20px;
@@ -194,7 +193,6 @@ main {
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #1f1f1f;
 }
 
 
@@ -229,13 +227,12 @@ main {
 }
 
 #scrollbar1::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 #scrollbar1::-webkit-scrollbar-track {
     border-radius: 8px;
-    background-color: #e7e7e7;
-    border: 1px solid #cacaca;
+    background-color: #ffffff;
 }
 
 #scrollbar1::-webkit-scrollbar-thumb {
@@ -247,7 +244,6 @@ main {
     font-weight: 600;
     padding: 1rem 1.5rem;
     margin-bottom: 10px;
-    color: #1f1f1f;
 }
 
 .booking {
@@ -260,7 +256,6 @@ main {
     width: 93%;
     border-radius: 16px;
     background-color: #fbfbfb;
-    /* box-shadow: 0px 0px 4px #d4d4d4; */
 }
 
 .status {
@@ -285,4 +280,8 @@ main {
     color: #3b98b6;
     background-color: #35aeeb28;
     border-color: #3b98b6;
+}
+
+.hidden {
+    display: none;
 }
