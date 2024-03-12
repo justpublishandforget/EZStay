@@ -183,8 +183,9 @@ const sidebarButtons = document.querySelectorAll('.menu li');
 const sections = document.querySelectorAll('section');
 
 function hideAllSections() {
-    for(let i = 0;i < sections.length; i++) {
+    for (let i = 0; i < sections.length; i++) {
         sections[i].classList.add('hidden');
+        sidebarButtons[i].classList.remove('active');
     }
 }
 
@@ -192,5 +193,23 @@ for (let i = 0; i < sidebarButtons.length; i++) {
     sidebarButtons[i].addEventListener('click', function () {
         hideAllSections();
         sections[i].classList.remove('hidden');
+        sidebarButtons[i].classList.add('active');
     });
 }
+
+const bookingTable = document.querySelector('#all-bookings-list tbody');
+bookings.forEach(booking => {
+    const bookingRow = document.createElement('tr');
+    const RowContent = ` 
+      <td>${booking.firstName} ${booking.lastName}</td>
+      <td>${booking.gender}</td>
+      <td>${booking.email}</td>
+      <td>${booking.arrivalDate}</td>
+      <td>${booking.departureDate}</td>
+      <td>${booking.roomType}</td>
+      <td><div class="status ${booking.status === 'Booked' ? 'booked' : booking.status === 'Pending' ? 'pending' : 'canceled'}">${booking.status}</div></td>
+      <td>${booking.paymentMode}</td>
+    `;
+    bookingRow.innerHTML = RowContent;
+    bookingTable.appendChild(bookingRow);
+});
