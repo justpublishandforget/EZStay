@@ -6,12 +6,19 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* Body styles */
 body {
     display: flex;
     background-color: #fbfbfb;
     color: #3a3a3a;
 }
 
+/* Anchor tag styles */
+a {
+    text-decoration: none;
+}
+
+/* Sidebar styles */
 .sidebar {
     position: sticky;
     top: 0;
@@ -26,6 +33,7 @@ body {
     transition: all 0.3s linear;
 }
 
+/* Logo styles */
 .logo {
     margin-top: 5px;
     height: 80px;
@@ -36,6 +44,7 @@ body {
     height: 40px;
 }
 
+/* Menu styles */
 .menu {
     height: 88%;
     position: relative;
@@ -57,7 +66,7 @@ body {
 
 .menu a {
     color: #222222;
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -75,12 +84,14 @@ body {
     width: 100%;
 }
 
+/* Main section styles */
 section {
     position: relative;
     padding: 1vh 1vw;
     width: 100%;
 }
 
+/* Header styles */
 .header-wrapper {
     display: flex;
     justify-content: space-between;
@@ -93,6 +104,7 @@ section {
     font-weight: 600;
 }
 
+/* Search bar styles */
 .search {
     margin: 0 2vw;
     padding: 1.5vh 1.5vw;
@@ -104,6 +116,7 @@ section {
     border: none;
 }
 
+/* Info cards container styles */
 .info-cards-container {
     margin-top: 4vh;
     padding: 2vh 2vw;
@@ -112,6 +125,7 @@ section {
     grid-column-gap: 1.5vw;
 }
 
+/* Info card styles */
 .info-card {
     position: relative;
     height: 20vh;
@@ -121,10 +135,7 @@ section {
     box-shadow: 1px 1px 20px #d4d4d4;
     transition: all 0.5s linear;
 }
-
-.info-card:hover,
-.search:hover,
-.ex-card:hover {
+.hover-effect:hover{
     box-shadow: 2px 2px 40px #a0a0a0;
     transition: 0.5s;
 }
@@ -139,6 +150,7 @@ section {
     color: #777777;
 }
 
+/* Pill styles */
 .pill {
     display: flex;
     justify-content: space-between;
@@ -148,9 +160,9 @@ section {
     height: 30px;
     width: 80px;
     border-radius: 20px;
-
 }
 
+/* Different pill and circle colors for each info card */
 .info-card:nth-child(1) .pill {
     background-color: #fdc667;
 }
@@ -195,7 +207,6 @@ section {
     margin-bottom: 20px;
 }
 
-
 .info-card h4 {
     position: absolute;
     bottom: 0;
@@ -206,6 +217,7 @@ section {
     color: #6335eb;
 }
 
+/* Additional info section styles */
 .extra-info {
     margin: 1vh 2vw;
     display: grid;
@@ -214,6 +226,7 @@ section {
     grid-column-gap: 1.5vw;
 }
 
+/* Additional card styles */
 .ex-card {
     height: 55vh;
     background-color: white;
@@ -221,9 +234,11 @@ section {
     box-shadow: 1px 1px 20px #d4d4d4;
 }
 
+/* Bookings list styles */
 .bookings-list {
     height: 33vh;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #scrollbar1::-webkit-scrollbar {
@@ -240,12 +255,14 @@ section {
     background-color: #fe7f5b;
 }
 
+/* Header styles for additional info sections */
 .ex-card h1 {
     font-weight: 600;
     padding: 1rem 1.5rem;
     margin-bottom: 10px;
 }
 
+/* Booking styles */
 .booking {
     display: flex;
     align-items: center;
@@ -258,6 +275,7 @@ section {
     background-color: #fbfbfb;
 }
 
+/* Different styles for booking status */
 .status {
     padding: 0.2rem 1rem;
     border-radius: 25px;
@@ -282,16 +300,20 @@ section {
     border-color: #3b98b6;
 }
 
+/* Hidden class to hide elements */
 .hidden {
     display: none;
 }
 
+/* Table styles for all bookings section */
 .all-bookings thead {
     background-color: #fdc667;
 }
+
 .all-bookings th {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
 }
+
 .all-bookings table {
     width: 100%;
     font-size: 18px;
@@ -311,4 +333,141 @@ section {
 
 .all-bookings tbody tr:nth-child(even) {
     background-color: #e9ecef;
+}
+
+.grid-reviews {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30vw, 40vw));
+    grid-gap: 40px;
+}
+
+.review {
+    position: relative;
+    height: 25vh;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 1px 1px 12px #d4d4d4;
+}
+
+.profile-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*Profile Section*/
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.profile-left {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 10px;
+}
+
+.hotel-profile {
+    width: 80%;
+    margin-inline: 10%;
+    border-radius: 25px;
+    text-align: center;
+    border: 0.5px solid #b6b6b6;
+}
+
+.profile-left h1 {
+    /* margin: 20px 0; */
+    padding: 1rem;
+}
+
+.profile-left img {
+    width: 100%;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.profile-extra-info {
+    line-height: 1.6;
+    width: 80%;
+    margin-inline: 10%;
+    border: 0.5px solid #b6b6b6;
+    border-radius: 25px;
+    padding: 2rem;
+}
+
+.profile-extra-info ul {
+    list-style: none;
+}
+
+.profile-extra-info li {
+    margin-bottom: 1rem;
+}
+
+.profile-right {
+    padding: 0 1rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding-bottom: 0;
+}
+
+.profile-right p {
+    font-size: 18px;
+}
+
+.pr-three-childs-container {
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+}
+
+.pr-three-childs-container>div {
+    border: 0.5px solid #b6b6b6;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.pr-three-childs-container h2 {
+    margin-inline: auto;
+    width: fit-content;
+    background-color: #fdc6676d;
+    border: 1.5px solid #fdc667;
+    padding: 0.5rem 1rem;
+    border-radius: 16px;
+    font-weight: 600;
+}
+.pr-three-childs-container p {
+    padding: 0 1rem;
+    margin-top: 20px;
+}
+
+.profile-right h1 {
+    font-weight: 600;
+
+}
+
+.right-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 0.5px solid #b6b6b6;
+    border-radius: 12px;
+    padding:  1rem;
+    height: 90%;
+}
+
+.right-info > div {
+    padding: 1rem 0;
+    border-bottom: 1px solid #fe7f5b;
 }
