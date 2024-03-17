@@ -105,19 +105,19 @@
 
 
     <footer class="footer">
-        <div class="footer-container">
+        <div class="container">
             <div class="row">
                 <div class="footer-col">
                     <h4>company</h4>
                     <ul>
                         <li>
-                            <a href="#"> about us</a>
+                            <a href="./aboutus.html"> about us</a>
                         </li>
                         <li>
-                            <a href="#"> our services</a>
+                            <a href="./services.html"> our services</a>
                         </li>
                         <li>
-                            <a href="#"> work with us</a>
+                            <a href="./business.html"> work with us</a>
                         </li>
                         <li>
                             <a href="#"> press key</a>
@@ -143,23 +143,24 @@
                         </li>
                     </ul>
 
-            </div>
+                </div>
 
-            <div class="footer-col">
-                <h4>learn more</h4>
-                <ul>
-                    <li>
-                        <a href="learnmore.html">privacy</a>
-                    </li>
-                    <li>
-                        <a href="learnmore.html">security</a>
-                    </li>
-                    <li>
-                        <a href="learnmore.html">terms</a>
-                    </li>
-                </ul>
+                <div class="footer-col">
+                    <h4>learn more</h4>
+                    <ul>
+                        <li>
+                            <a href="./learnmore.html">privacy</a>
+                        </li>
+                        <li>
+                            <a href="./learnmore.html">security</a>
+                        </li>
+                        <li>
+                            <a href="./learnmore.html">terms</a>
+                        </li>
+                    </ul>
 
                 </div>
+
                 <div class="footer-col">
                     <h4>follow us</h4>
                     <div class="social-links">
@@ -169,7 +170,11 @@
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
+
+
+
             </div>
+
         </div>
     </footer>
     <!-- Hidden Overlay -->
@@ -188,7 +193,7 @@
     <div class="overlay hidden">
     </div>
 
-     <script src="https://kit.fontawesome.com/5050694ff5.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5050694ff5.js" crossorigin="anonymous"></script>
     <script>
         const overlay = document.querySelector('.overlay');
         const signBtn = document.querySelector('.modal-open');
@@ -196,11 +201,11 @@
         const registerBtn = document.querySelector('.btn-register');
         const loginBtn = document.querySelector('.login-btn');
 
-        registerBtn.addEventListener('click',function() {
+        registerBtn.addEventListener('click', function () {
             window.location.href = 'newBussiness.html';
         });
 
-        loginBtn.addEventListener('click',function() {
+        loginBtn.addEventListener('click', function () {
             window.location.href = 'dashboard.html';
         });
 
