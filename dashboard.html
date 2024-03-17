@@ -2,19 +2,26 @@
 <html lang="en">
 
 <head>
+  <!-- Meta tags for character set and viewport -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title of the webpage -->
   <title>Dashboard</title>
+  <!-- Link to external CSS files -->
   <link rel="stylesheet" href="./css/fonts.css">
   <link rel="stylesheet" href="./css/dashboard.css">
+  <!-- Link to favicon -->
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
+  <!-- Sidebar section -->
   <div class="sidebar">
+    <!-- Logo -->
     <div class="logo">
       <img src="images/logo.svg" alt="">
     </div>
+    <!-- Menu items -->
     <ul class="menu">
       <li class="active">
         <a href="#">
@@ -52,6 +59,7 @@
           <span>Setting</span>
         </a>
       </li>
+      <!-- Logout button -->
       <li class="logout">
         <a href="./business.html">
           <i class="fas fa-sign-out-alt"></i>
@@ -61,20 +69,26 @@
     </ul>
   </div>
 
+  <!-- Main section -->
   <section class="main">
+    <!-- Header -->
     <div class="header-wrapper">
       <div class="header-title">
         <h1>Hotel Admin Dashboard</h1>
       </div>
+      <!-- Search bar -->
       <div class="search">
         <input type="text" name="search" placeholder="Search">
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
     </div>
+    <!-- Info cards -->
     <div class="info-cards-container">
+      <!-- Info card: New Bookings -->
       <div class="info-card">
         <div class="info-header">
           <p>New Bookings</p>
+          <!-- Pill with percentage -->
           <div class="pill">
             <span class="circle">◭</span>
             <p>20%</p>
@@ -83,9 +97,11 @@
         <h1>24</h1>
         <h4 class="bookings-details">Details ></h4>
       </div>
+      <!-- Info card: Total Revenue -->
       <div class="info-card">
         <div class="info-header">
           <p>Total Revenue</p>
+          <!-- Pill with currency symbol and percentage -->
           <div class="pill">
             <span class="circle">₹</span>
             <p>20%</p>
@@ -94,9 +110,11 @@
           <h4 class="revenue-details">Details ></h4>
         </div>
       </div>
+      <!-- Info card: Total Customers -->
       <div class="info-card">
         <div class="info-header">
           <p>Total Customers</p>
+          <!-- Pill with symbol and percentage -->
           <div class="pill">
             <span class="circle">Ħ</span>
             <p>20%</p>
@@ -106,7 +124,9 @@
         <h4 class="customers-details">Details ></h4>
       </div>
     </div>
+    <!-- Additional info section -->
     <div class="extra-info">
+      <!-- Recent bookings -->
       <div class="recent ex-card">
         <h1>Recent Bookings</h1>
         <div class="booking">
@@ -115,14 +135,17 @@
           <p>Payment Mode</p>
         </div>
         <div class="bookings-list" id="scrollbar1">
-
+          <!-- Bookings list will be populated dynamically -->
         </div>
       </div>
+      <!-- Additional cards (if any) -->
       <div class="ex-card"></div>
     </div>
   </section>
 
+  <!-- Sections for profile, all bookings, hotel info, reviews, and settings (all initially hidden) -->
   <section class="profile hidden">
+    <!-- Profile section header and search bar -->
     <div class="header-wrapper">
       <div class="header-title">
         <h1>Profile</h1>
@@ -134,6 +157,7 @@
     </div>
   </section>
   <section class="all-bookings hidden">
+    <!-- All bookings section header, search bar, and table -->
     <div class="header-wrapper">
       <div class="header-title">
         <h1>Bookings</h1>
@@ -158,12 +182,13 @@
           </tr>
         </thead>
         <tbody>
-          
+          <!-- Booking details will be populated dynamically -->
         </tbody>
       </table>
     </div>
   </section>
   <section class="hotelInfo hidden">
+    <!-- Hotel info section header and search bar -->
     <div class="header-wrapper">
       <div class="header-title">
         <h1>Hotel Info</h1>
@@ -175,6 +200,7 @@
     </div>
   </section>
   <section class="reviews hidden">
+    <!-- Reviews section header and search bar -->
     <div class="header-wrapper">
       <div class="header-title">
         <h1>Reviews</h1>
@@ -184,8 +210,13 @@
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
     </div>
+
+    <div class="grid-reviews">
+      
+    </div>
   </section>
   <section class="settings hidden">
+    <!-- Settings section header and search bar -->
     <div class="header-wrapper">
       <div class="header-title">
         <h1>Settings</h1>
@@ -196,7 +227,9 @@
       </div>
     </div>
   </section>
+  <!-- Font Awesome script -->
   <script src="https://kit.fontawesome.com/5050694ff5.js" crossorigin="anonymous"></script>
+  <!-- Custom JavaScript file for dashboard functionality -->
   <script src="dashboard.js"> </script>
 </body>
 
