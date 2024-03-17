@@ -7,6 +7,8 @@ const iconinfo = document.querySelectorAll(".icon-info");
 const iconbtn = document.querySelectorAll(".iconbtn-1");
 const items = document.querySelectorAll(".items-1");
 
+let cardClickedIndex;
+
 // signIn button
 const signInBtn = document.querySelector(".sign-in-btn");
 signInBtn.addEventListener("click", () => {
@@ -349,11 +351,16 @@ const updateCardsWithData = () => {
     item.querySelector("p").innerText = hotelData[index].rating;
     Address[1].innerText = hotelData[index].hotelAddress;
     item.querySelector("span").innerText = "₹ " + hotelData[index].hotelPrice;
-  // console.log(cardImg);
+  
+    item.addEventListener('click', () => {
+     cardClickedIndex = index;
+     console.log(cardClickedIndex);
+      window.open('hotelInfo.html', '_blank');
+  });
+  
 
 
   for (let i = 0; i < 4; i++) {
-    console.log(hotelData[index].imageLinks[i]);
     cardImg[(index * 4) + i].src = hotelData[index].imageLinks[i];
   }
 
@@ -474,3 +481,18 @@ crossCutGuestBox.addEventListener('click',()=>{
 })
 
 
+
+
+
+// Hotel info page JS
+
+
+// const hotelName = document.querySelector('#hotelName')
+// const hotelAddress = document.querySelector('#hotelAddress')
+// console.log(hotelName.innerHTML);
+
+// hotelName.innerHTML = hotelData[cardClickedIndex].hotelName;
+// console.log(hotelData[cardClickedIndex].hotelName);
+// console.log(cardClickedIndex);
+
+export default cardClickedIndex;
