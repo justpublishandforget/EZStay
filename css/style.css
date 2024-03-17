@@ -1,4 +1,3 @@
-
 * {
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -19,7 +18,7 @@ nav {
     border: 1px solid #bcbcbc;
     border-right: 0;
     display: flex;
-    
+
     padding: 10px 0;
     justify-content: space-between;
     position: fixed;
@@ -54,7 +53,7 @@ nav {
     padding: 5px 10px;
     font-size: 20px;
     margin-left: 10px;
-    background-color: #FDDB32 ;
+    background-color: #FDDB32;
     border: none;
     border-radius: 10px;
 }
@@ -177,7 +176,7 @@ nav {
 .search {
     display: flex;
     height: 60px;
-    width: 100%; 
+    width: 100%;
     max-width: 725px;
     border-radius: 75px;
     margin: 17px auto 10px;
@@ -186,9 +185,9 @@ nav {
 
 .search form {
     display: flex;
-    flex: 1; 
+    flex: 1;
     align-items: center;
-    padding: 17px 
+    padding: 17px
 }
 
 .search form input {
@@ -202,20 +201,21 @@ nav {
 .search-bar-divs {
     display: flex;
     flex-direction: column;
-    margin-right: 20px; 
+    margin-right: 20px;
     gap: 2px;
     padding: 5px;
 }
 
-.search-bar-divs:hover{
-    background-color:rgba(224, 224, 224, 0.54);
+.search-bar-divs:hover {
+    background-color: rgba(224, 224, 224, 0.54);
     padding: 4px 5px;
     border-radius: 5px;
-    
+
 }
 
 .search-logo {
-    padding: 10px; /* Adjusted padding */
+    padding: 10px;
+    /* Adjusted padding */
     border-radius: 50%;
     font-size: 23px;
     display: flex;
@@ -227,7 +227,7 @@ nav {
 }
 
 /* ******************************************************* */
-.guest-box{
+.guest-box {
     position: absolute;
     top: 14vw;
     right: 13vw;
@@ -239,32 +239,36 @@ nav {
 
 
 }
-.guestIncr i{
+
+.guestIncr i {
     font-size: 20px;
     color: rgb(175, 175, 175);
 }
 
-.guest-adult{
+.guest-adult {
     display: flex;
     gap: 10px;
     margin-top: 10px;
     justify-content: space-between;
     padding: 15px;
 }
-.guestIncr{
+
+.guestIncr {
     display: flex;
     gap: 8px;
     align-items: center;
 }
 
-.noOfGuest{
+.noOfGuest {
     width: 10px;
     font-size: 18px;
 }
-.hr{
+
+.hr {
     margin: 5px 10px 0px 10px;
 }
-.crossCut-guest-box{
+
+.crossCut-guest-box {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -277,7 +281,8 @@ nav {
     justify-content: center;
     background-color: transparent;
 }
-.crossCut-guest-box:hover{
+
+.crossCut-guest-box:hover {
     background-color: rgb(236, 233, 233);
     border-radius: 50%;
 }
@@ -335,14 +340,14 @@ nav {
 
 }
 
-.card-img-scroll{
+.card-img-scroll {
     /* display: flex; */
     max-width: 100%;
     height: 13rem;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    
+
 }
 
 .card-img {
@@ -359,19 +364,19 @@ nav {
     transition: transform 1s;
 }
 
-.card-img:hover{
+.card-img:hover {
     scale: 1.2;
     transition: all 0.5s ease-in-out;
 }
 
-.card-img > img {
+.card-img>img {
     /* Only for images that have different size than slide */
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 
-.card-heart{
+.card-heart {
     position: absolute;
     top: 5px;
     right: 10px;
@@ -380,20 +385,21 @@ nav {
     border: none;
 }
 
-.card-heart i{
-    
+.card-heart i {
+
     color: rgba(0, 0, 0, 0.3);
 }
 
 
 
 
-.card-img-scroll-right{
+.card-img-scroll-right {
     position: absolute;
     top: 85px;
     right: 10px;
 }
-.card-img-scroll-left{
+
+.card-img-scroll-left {
     position: absolute;
     top: 85px;
     left: 10px;
@@ -449,7 +455,8 @@ nav {
 
 
 /* card buttons left and right */
-.card-img-scroll-left, .card-img-scroll-right{
+.card-img-scroll-left,
+.card-img-scroll-right {
     width: 24px;
     height: 24px;
     font-size: 24px;
@@ -489,16 +496,16 @@ footer {
     height: 165px;
     width: 313px;
 
-  
+
     background-color: white;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
     z-index: 10;
     overflow: scroll;
-  }
+}
 
-  .close-modal {
+.close-modal {
     position: fixed;
     top: 3.2rem;
     right: 1.5rem;
@@ -508,16 +515,16 @@ footer {
     border: none;
     background: none;
     z-index: 15;
-  }
+}
 
-  .bookmarked-item {
+.bookmarked-item {
     /* border: 1px solid #ccc; */
     margin-bottom: 10px;
     padding: 10px;
     background-color: #f9f9f9;
-  }
-  
-  .bookmarked-item p {
+}
+
+.bookmarked-item p {
     margin: 0;
   }
   

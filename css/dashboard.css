@@ -137,7 +137,7 @@ section {
 }
 .hover-effect:hover{
     box-shadow: 2px 2px 40px #a0a0a0;
-    transition: 0.5s;
+    transition: 0.5s linear;
 }
 
 .info-header {
@@ -406,12 +406,18 @@ section {
     padding: 2rem;
 }
 
-.profile-extra-info ul {
+.profile-extra-info ul { 
+    padding: 1rem 0;
     list-style: none;
 }
 
 .profile-extra-info li {
-    margin-bottom: 1rem;
+    margin: 0.5rem;
+}
+
+.profile-extra-info h2 {
+    font-weight: 500;
+    color: #444444;
 }
 
 .profile-right {
@@ -470,4 +476,12 @@ section {
 .right-info > div {
     padding: 1rem 0;
     border-bottom: 1px solid #fe7f5b;
+}
+
+.ratings {
+    height: 40px;
+    width: 40px;
+    padding: 0.5rem;
+    background-color: #f8fd67;
+    border-radius: 50%;
 }
