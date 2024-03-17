@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta tags for character set and viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title of the webpage -->
+  <title>Dashboard</title>
+  <!-- Link to external CSS files -->
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/dashboard.css">
+  <!-- Link to favicon -->
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Sidebar section -->
+  <div class="sidebar">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="images/logo.svg" alt="">
+    </div>
+    <!-- Menu items -->
+    <ul class="menu">
+      <li class="active">
+        <a href="#">
+          <i class="fas fa-tachometer-alt"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-user-group"></i>
+          <span>Bookings</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-star"></i>
+          <span>Reviews</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Hotels</span>
+        </a>
+      </li>
+     
+      <!-- <li>
+        <a href="#">
+          <i class="fas fa-cog"></i>
+          <span>Setting</span>
+        </a>
+      </li> -->
+      <!-- Logout button -->
+      <li class="logout">
+        <a href="./business.html">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Sign Out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Main section -->
+  <section class="main">
+    <!-- Header -->
+    <div class="header-wrapper">
+      <div class="header-title">
+        <h1>Admin Dashboard</h1>
+      </div>
+      <!-- Search bar -->
+      <div class="search hover-effect">
+        <input type="text" name="search" placeholder="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+    <!-- Info cards -->
+    <div class="info-cards-container">
+      <!-- Info card: New Bookings -->
+      <div class="info-card hover-effect">
+        <div class="info-header">
+          <p>New Hotels</p>
+          <!-- Pill with percentage -->
+          <div class="pill">
+            <span class="circle">◭</span>
+            <p>20%</p>
+          </div>
+        </div>
+        <h1>120</h1>
+        <h4 class="bookings-details">Details ></h4>
+      </div>
+      <!-- Info card: Total Revenue -->
+      <div class="info-card hover-effect">
+        <div class="info-header">
+          <p>Total Revenue</p>
+          <!-- Pill with currency symbol and percentage -->
+          <div class="pill">
+            <span class="circle">₹</span>
+            <p>20%</p>
+          </div>
+          <h1>₹ 1.2 Crore</h1>
+          <h4 class="revenue-details">Details ></h4>
+        </div>
+      </div>
+      <!-- Info card: Total Customers -->
+      <div class="info-card hover-effect">
+        <div class="info-header">
+          <p>Total Hotels</p>
+          <!-- Pill with symbol and percentage -->
+          <div class="pill">
+            <span class="circle">Ħ</span>
+            <p>20%</p>
+          </div>
+        </div>
+        <h1>1,000</h1>
+        <h4 class="customers-details">Details ></h4>
+      </div>
+    </div>
+    <!-- Additional info section -->
+    <div class="extra-info">
+      <!-- Recent bookings -->
+      <div class="recent ex-card hover-effect">
+        <h1>Recently Addded Hotels</h1>
+        <div class="booking">
+          <p>Hotel Name</p>
+          <p>Location</p>
+          <p>Rating</p>
+        </div>
+        <div class="bookings-list" id="scrollbar1">
+          <!-- Bookings list will be populated dynamically -->
+        </div>
+      </div>
+      <!-- Additional cards (if any) -->
+      <div class="ex-card hover-effect"></div>
+    </div>
+  </section>
+
+  <!-- Sections for profile, all bookings, hotel info, reviews, and settings (all initially hidden) -->
+  <section class="profile hidden">
+    <!-- Profile section header and search bar -->
+    <div class="header-wrapper">
+      <div class="header-title">
+        <h1>Profile</h1>
+      </div>
+      <div class="search">
+        <input type="text" name="search" placeholder="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+    
+  </section>
+  <section class="all-bookings hidden">
+    <!-- All bookings section header, search bar, and table -->
+    <div class="header-wrapper">
+      <div class="header-title">
+        <h1>Bookings</h1>
+      </div>
+      <div class="search">
+        <input type="text" name="search" placeholder="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+    <div id="all-bookings-list">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Arrival</th>
+            <th>Departure</th>
+            <th>RoomType</th>
+            <th>Status</th>
+            <th>Payment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Booking details will be populated dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="reviews hidden">
+    <!-- Reviews section header and search bar -->
+    <div class="header-wrapper">
+      <div class="header-title">
+        <h1>Reviews</h1>
+      </div>
+      <div class="search">
+        <input type="text" name="search" placeholder="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+    <div class="grid-reviews">
+      <!-- reviews will be populated dynamically -->
+    </div>
+  </section>
+
+  <section class="all-bookings hidden">
+    <!-- All bookings section header, search bar, and table -->
+    <div class="header-wrapper">
+      <div class="header-title">
+        <h1>Hotels</h1>
+      </div>
+      <div class="search">
+        <input type="text" name="search" placeholder="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+    <div id="hotels">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Total Rooms</th>
+            <th>Available <br>Rooms</th>
+            <th>Rating</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Booking details will be populated dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- <section class="settings hidden">
+    Settings section header and search bar
+    <div class="header-wrapper">
+      <div class="header-title">
+        <h1>Settings</h1>
+      </div>
+      <div class="search">
+        <input type="text" name="search" placeholder="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+  </section> -->
+  <!-- Font Awesome script -->
+  <script src="https://kit.fontawesome.com/5050694ff5.js" crossorigin="anonymous"></script>
+  <!-- Custom JavaScript file for dashboard functionality -->
+  <script src="admin.js"> </script>
+</body>
+
+</html>

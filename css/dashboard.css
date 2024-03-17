@@ -477,3 +477,11 @@ section {
     padding: 1rem 0;
     border-bottom: 1px solid #fe7f5b;
 }
+
+.ratings {
+    height: 40px;
+    width: 40px;
+    padding: 0.5rem;
+    background-color: #f8fd67;
+    border-radius: 50%;
+}
