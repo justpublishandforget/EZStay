@@ -135,10 +135,7 @@ section {
     box-shadow: 1px 1px 20px #d4d4d4;
     transition: all 0.5s linear;
 }
-
-.info-card:hover,
-.search:hover,
-.ex-card:hover {
+.hover-effect:hover{
     box-shadow: 2px 2px 40px #a0a0a0;
     transition: 0.5s;
 }
@@ -241,6 +238,7 @@ section {
 .bookings-list {
     height: 33vh;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #scrollbar1::-webkit-scrollbar {
@@ -340,7 +338,7 @@ section {
 .grid-reviews {
     padding-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(30vw,40vw));
+    grid-template-columns: repeat(auto-fit, minmax(30vw, 40vw));
     grid-gap: 40px;
 }
 
@@ -364,4 +362,112 @@ section {
     justify-content: space-between;
     padding-right: 1rem;
     margin-bottom: 1rem;
+}
+
+/*Profile Section*/
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.profile-left {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 10px;
+}
+
+.hotel-profile {
+    width: 80%;
+    margin-inline: 10%;
+    border-radius: 25px;
+    text-align: center;
+    border: 0.5px solid #b6b6b6;
+}
+
+.profile-left h1 {
+    /* margin: 20px 0; */
+    padding: 1rem;
+}
+
+.profile-left img {
+    width: 100%;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.profile-extra-info {
+    line-height: 1.6;
+    width: 80%;
+    margin-inline: 10%;
+    border: 0.5px solid #b6b6b6;
+    border-radius: 25px;
+    padding: 2rem;
+}
+
+.profile-extra-info ul {
+    list-style: none;
+}
+
+.profile-extra-info li {
+    margin-bottom: 1rem;
+}
+
+.profile-right {
+    padding: 0 1rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding-bottom: 0;
+}
+
+.profile-right p {
+    font-size: 18px;
+}
+
+.pr-three-childs-container {
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+}
+
+.pr-three-childs-container>div {
+    border: 0.5px solid #b6b6b6;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.pr-three-childs-container h2 {
+    margin-inline: auto;
+    width: fit-content;
+    background-color: #fdc6676d;
+    border: 1.5px solid #fdc667;
+    padding: 0.5rem 1rem;
+    border-radius: 16px;
+    font-weight: 600;
+}
+.pr-three-childs-container p {
+    padding: 0 1rem;
+    margin-top: 20px;
+}
+
+.profile-right h1 {
+    font-weight: 600;
+
+}
+
+.right-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 0.5px solid #b6b6b6;
+    border-radius: 12px;
+    padding:  1rem;
+    height: 90%;
+}
+
+.right-info > div {
+    padding: 1rem 0;
+    border-bottom: 1px solid #fe7f5b;
 }
