@@ -192,6 +192,8 @@ const updateCardsWithData = (hotelData) => {
   const cards = document.querySelectorAll(".card");
   const cardComment = document.querySelectorAll(".card-comment");
   const cardImg = document.querySelectorAll('.card-img');
+  const cardText = document.querySelectorAll('.card-name');
+  
   // console.log(cardImg);
 
   cards.forEach((item, index) => {
@@ -201,11 +203,19 @@ const updateCardsWithData = (hotelData) => {
     Address[1].innerText = hotelData[index].hotelAddress;
     item.querySelector("span").innerText = "₹ " + hotelData[index].hotelPrice;
   
-    item.addEventListener('click', () => {
-     cardClickedIndex = index;
-     console.log(cardClickedIndex);
+  //   item.addEventListener('click', () => {
+  //    cardClickedIndex = index;
+  //    console.log(cardClickedIndex);
+  //     window.open('hotelInfo.html', '_blank');
+  // });
+
+    cardImg[index].addEventListener('click', ()=>{
       window.open('hotelInfo.html', '_blank');
-  });
+    })
+    cardText[index].addEventListener('click', ()=>{
+      window.open('hotelInfo.html', '_blank');
+    })
+
   
 
 
