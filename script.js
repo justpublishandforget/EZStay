@@ -342,4 +342,3 @@ crossCutGuestBox.addEventListener('click',()=>{
 // console.log(hotelData[cardClickedIndex].hotelName);
 // console.log(cardClickedIndex);
 
-export default cardClickedIndex;
