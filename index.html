@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EZStay</title>
 
   <!-- CSS -->
+  <link rel="stylesheet" href="./css/fonts.css">
   <link rel="stylesheet" href="/css/style.css" />
-  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
+
 </head>
+
 <body>
   <!-- Navigation Bar Start -->
   <nav>
     <!-- Left side of navigation bar -->
     <div class="nav-leftside">
-      <button class="menu"><i class="ri-menu-line"></i></button>
+      <button class="menu"><i class="fa-solid fa-bars"></i></button>
       <img class="logo" src="/images/logo.svg" alt="img" />
     </div>
 
     <!-- Right side of navigation bar -->
     <div class="nav-rightside">
-      <i class="ri-heart-fill"></i>
+      <div class="bookmark">
+        <i class="ri-heart-fill"></i>
+      </div>
       <button class="btn sign-in-btn">Sign in</button>
     </div>
   </nav>
   <!-- Navigation Bar End -->
+
 
   <!-- Section -->
   <section class="p1">
@@ -33,72 +41,99 @@
     <div class="sidebar">
       <div id="item-container">
         <div class="items-1">
-          <button class="iconbtn-1"><i class="ri-account-circle-fill"></i><p class="icon-info">Sign in</p></button>
+          <button class="iconbtn-1">
+            <i class="ri-account-circle-fill"></i>
+
+            <a href="login.html" class="icon-info">Sign in</a>
+          </button>
         </div>
         <div class="items-1">
-          <button class="iconbtn-1"><i class="ri-compass-3-fill"></i><p class="icon-info">Explore</p></button>
+          <button class="iconbtn-1">
+            <i class="ri-compass-3-fill"></i>
+            <p class="icon-info">Explore</p>
+          </button>
         </div>
         <div class="items-1">
-          <button class="iconbtn-1"><i class="ri-hotel-bed-fill"></i><p class="icon-info">Stays</p></button>
+          <button class="iconbtn-1">
+            <i class="ri-hotel-bed-fill"></i>
+            <p class="icon-info">Stays</p>
+          </button>
         </div>
         <div class="items-1">
-          <button class="iconbtn-1"><i class="ri-hotel-line"></i><p class="icon-info">Hotels</p></button>
+          <button class="iconbtn-1">
+            <i class="ri-hotel-line"></i>
+            <p class="icon-info"><a href="#hotels">Hotels</a></p>
+          </button>
         </div>
         <div class="items-1">
-          <button class="iconbtn-1"><i class="ri-briefcase-fill"></i><p class="icon-info">Business</p></button>
+          <button class="iconbtn-1">
+            <i class="ri-briefcase-fill"></i>
+            <a href="business.html" class="icon-info">Business</a>
+          </button>
         </div>
         <div class="items-1">
-          <button class="iconbtn-1"><i class="ri-heart-fill"></i><p class="icon-info">Trips</p></button>
+          <button class="iconbtn-1">
+            <i class="ri-heart-fill"></i>
+            <p class="icon-info">Trips</p>
+          </button>
         </div>
         <div class="items-1">
-          <button class="iconbtn-1"><i class="ri-feedback-fill"></i><p class="icon-info">Feedback</p></button>
+          <button class="iconbtn-1">
+            <i class="ri-feedback-fill"></i>
+            <p class="icon-info"><a href="feedback.html">Feedback</a></p>
+          </button>
         </div>
-        <div class="items-1">
-          <button class="iconbtn-1"><i class="ri-global-line"></i><p class="icon-info">Sign in</p></button>
-        </div>
-        <div class="items-1">
-          <button class="iconbtn-1"><i class="ri-global-line"></i><p class="icon-info">Sign in</p></button>
-        </div>
+
+
       </div>
     </div>
 
     <!-- Main Page -->
+    <!-- pop up window -->
+    <button class="close-modal hidden">&times;</button>
+    <div class="modal hidden">
+    </div>
+
+
+
     <div class="mainpage">
       <span>Discover your new favourite stay</span>
 
       <!-- Search, Date, Time Booking Bar -->
       <div class="search">
         <form action="">
-
           <div class="search-bar-divs">
             <label>Where</label>
-            <input type="text" placeholder="Destination">
+            <input type="text" placeholder="Destination" />
           </div>
 
           <div class="search-bar-divs">
             <label>Check in</label>
-            <input type="date" placeholder="Add dates">
+            <input type="date" placeholder="Add dates" />
           </div>
 
           <div class="search-bar-divs">
             <label>Check out<output></output></label>
-            <input type="date" placeholder="add dates">
+            <input type="date" placeholder="add dates" />
           </div>
 
-          <div class="search-bar-divs">
+          <div class="search-bar-divs Who">
             <label>Who</label>
-            <input type="text" placeholder="guest">
+            <input type="text" placeholder="guest" />
+            <!--             
+            <select name="adults" id="adults">
+              <option value="1"> Adult (Age 13 or above)</option>
+              <option value="2"> Children (Ages 2–12)</option>
+              <option value="3"> Infants (Under 2)</option>
+            </select> -->
           </div>
 
           <div>
-            <button class="search-logo" type="submit"><i class="ri-search-line"></i></button>
+            <button class="search-logo" type="submit">
+              <i class="ri-search-line"></i>
+            </button>
           </div>
-
-         
         </form>
-
-
-
       </div>
 
       <div class="bigImage">
@@ -112,23 +147,131 @@
       </div>
       <h2>Hotels near you</h2>
 
-      <div class="card-container"></div>
-      <!-- Footer -->
-      <!--
-      <footer>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
-          deleniti perferendis fugit iure assumenda odio quam beatae saepe
-          ipsa, tempore veritatis, amet animi dolore id dicta porro temporibus
-          iusto expedita.
-        </p>
-      </footer>
-      -->
-    </div>
-  </section>
-  <!-- End of Section -->
+      <div class="card-container" id="hotels"></div>
 
-  <!-- Script -->
-  <script src="script.js"></script>
+      <!-- Drop down on guest in search bar -->
+      <div class="guest-box">
+        <div class="guest-adult">
+          <div>
+            <h4>Adult</h4>
+            <p>Ages 13 or above</p>
+          </div>
+
+            <div class="guestIncr">
+              <i class="ri-subtract-line subGuest"></i>
+              <p class="noOfGuest">1</p>
+              <i class="ri-add-line addGuest"></i>
+            </div>
+          </div>
+
+        <hr class="hr" />
+
+        <div class="guest-adult">
+          <div>
+            <h4>Children</h4>
+            <p>Below 13</p>
+          </div>
+
+            <div class="guestIncr">
+              <i class="ri-subtract-line subGuest"></i>
+              <p class="noOfGuest">1</p>
+              <i class="ri-add-line addGuest"></i>
+            </div>
+          </div>
+
+        <button class="crossCut-guest-box">&times;</button>
+
+          </div>
+          
+
+        </div>
+
+        
+        
+        
+      </div>
+    </section>
+    <!-- End of Section -->
+
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+              <div class="footer-col">
+                  <h4>company</h4>
+                  <ul>
+                      <li>
+                          <a href="#"> about us</a>
+                      </li>
+                      <li>
+                          <a href="#"> our services</a>
+                      </li>
+                      <li>
+                          <a href="#"> work with us</a>
+                      </li>
+                      <li>
+                          <a href="#"> press key</a>
+                      </li>
+                  </ul>
+  
+              </div>
+  
+              <div class="footer-col">
+                  <h4>get help</h4>
+                  <ul>
+                      <li>
+                          <a href="#">FAQ</a>
+                      </li>
+                      <li>
+                          <a href="#">booking status</a>
+                      </li>
+                      <li>
+                          <a href="#">returns</a>
+                      </li>
+                      <li>
+                          <a href="#">payment options</a>
+                      </li>
+                  </ul>
+  
+              </div>
+  
+              <div class="footer-col">
+                  <h4>learn more</h4>
+                  <ul>
+                      <li>
+                          <a href="#">privacy</a>
+                      </li>
+                      <li>
+                          <a href="#">security</a>
+                      </li>
+                      <li>
+                          <a href="#">terms</a>
+                      </li>
+                  </ul>
+  
+              </div>
+  
+              <div class="footer-col">
+                  <h4>follow us</h4>
+                      <div class="social-links">
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                      </div>
+              </div>
+  
+              
+  
+          </div>
+  
+      </div>
+  </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/5050694ff5.js" crossorigin="anonymous"></script>
+    
+
 </body>
+
 </html>
