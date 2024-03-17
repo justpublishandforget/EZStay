@@ -8,6 +8,9 @@
   font-family: "Poppins", sans-serif;
 }
 
+a {
+  text-decoration:none;
+}
 /* Global Styles */
 
 section {
