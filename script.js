@@ -23,7 +23,7 @@ menu.addEventListener("click", function () {
 
     main.style.width = "95%";
     side.style.width = "5%";
-    main.style.marginLeft = "6%";
+    main.style.marginLeft = "0";
     cardContainer.style.gridTemplateColumns =
       "repeat(auto-fit,minmax(110px, 299px))";
     cardContainer.style.gridGap = "3.5rem";
@@ -50,7 +50,7 @@ menu.addEventListener("click", function () {
 
     main.style.width = "83%";
     side.style.width = "15%";
-    main.style.marginLeft = "18%";
+    main.style.marginLeft = "0";
     cardContainer.style.gridTemplateColumns =
       "repeat(auto-fit,minmax(110px, 272px))";
     cardContainer.style.gridGap = "2rem";
@@ -200,13 +200,6 @@ const updateCardsWithData = (hotelData) => {
     item.querySelector("p").innerText = hotelData[index].rating;
     Address[1].innerText = hotelData[index].hotelAddress;
     item.querySelector("span").innerText = "₹ " + hotelData[index].hotelPrice;
-  
-    item.addEventListener('click', () => {
-     cardClickedIndex = index;
-     console.log(cardClickedIndex);
-      window.open('hotelInfo.html', '_blank');
-  });
-  
 
 
   for (let i = 0; i < 4; i++) {
