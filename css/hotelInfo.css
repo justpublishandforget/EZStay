@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #fff;
+  border: 1px solid #bcbcbc;
+  border-right: 0;
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+}
+
+.logo {
+  height: 35px;
+  width: auto;
+}
+
+.nav-rightside {
+  display: flex;
+  margin-right: 200px; 
+  align-items: center;
+}
+
+.nav-rightside i {
+  font-size: 23px;
+}
+
+.sign-in-btn {
+  padding: 5px 10px;
+  font-size: 20px;
+  margin-left: 10px;
+  background-color: #fddb32;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.nav-leftside {
+  display: flex;
+  align-items: center;
+  margin-left: 200px; /* Reduced margin for better alignment */
+  gap: 30px;
+}
+
+.menu i {
+  font-size: 18px;
+  padding: 0 3px;
+  background-color: white;
+  color: #000; /* Changed color value to hex */
+}
+
+/* Main Body */
+.main-body {
+  padding: 100px 200px 0; /* Adjusted padding */
+  background-color: bisque;
+}
+
+.image-container {
+  width: 75%;
+  border: 1px solid black;
+  height: 405px;
+  display: flex;
+  gap: 10px;
+  margin: auto;
+}
+
+.image-container .div1 .img {
+  height: 405px;
+}
+
+.hotel-Name-Add {
+  width: 75%;
+  border: 1px solid black;
+  margin: auto;
+}
+
+/* Additional Styles */
+.info {
+  width: 100%;
+  display: flex;
+  gap: 80px;
+  margin-top: 100px ;
+}
+
+.info-text {
+  width: 100%;
+}
+
+.info-feature-box {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 30px; /* Adjusted padding */
+}
+
+.feature-one {
+  display: flex;
+}
+
+.info-hotel-para {
+  margin: 30px 0; /* Combined margin */
+}
+
+.offers {
+  display: flex;
+  gap: 100px;
+}
+
+.offer-one {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.priceCard {
+  border: 1px solid black;
+  height: 420px;
+  width: 370px;
+  position: sticky;
+  top: 150px;
+}

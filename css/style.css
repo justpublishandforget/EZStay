@@ -202,7 +202,7 @@ nav {
 }
 
 .search-bar-divs:hover{
-    background-color:lightgray;
+    background-color:rgba(224, 224, 224, 0.54);
     padding: 4px 5px;
     border-radius: 5px;
     
