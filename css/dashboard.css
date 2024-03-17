@@ -136,11 +136,9 @@ section {
     transition: all 0.5s linear;
 }
 
-.info-card:hover,
-.search:hover,
-.ex-card:hover {
+.hover-effect:hover {
     box-shadow: 2px 2px 40px #a0a0a0;
-    transition: 0.5s;
+    transition: 0.5s linear;
 }
 
 .info-header {
@@ -241,6 +239,7 @@ section {
 .bookings-list {
     height: 33vh;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #scrollbar1::-webkit-scrollbar {
@@ -340,7 +339,7 @@ section {
 .grid-reviews {
     padding-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(30vw,40vw));
+    grid-template-columns: repeat(auto-fit, minmax(30vw, 40vw));
     grid-gap: 40px;
 }
 
@@ -364,4 +363,212 @@ section {
     justify-content: space-between;
     padding-right: 1rem;
     margin-bottom: 1rem;
+}
+
+/*Profile Section*/
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.profile-left {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 10px;
+}
+
+.hotel-profile {
+    width: 80%;
+    margin-inline: 10%;
+    border-radius: 25px;
+    text-align: center;
+    border: 0.5px solid #b6b6b6;
+}
+
+.profile-left h1 {
+    /* margin: 20px 0; */
+    padding: 1rem;
+}
+
+.profile-left img {
+    width: 100%;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.profile-extra-info {
+    line-height: 1.6;
+    width: 80%;
+    margin-inline: 10%;
+    border: 0.5px solid #b6b6b6;
+    border-radius: 25px;
+    padding: 2rem;
+}
+
+.profile-extra-info ul {
+    padding: 1rem 0;
+    list-style: none;
+}
+
+.profile-extra-info li {
+    margin: 0.5rem;
+}
+
+.profile-extra-info h2 {
+    font-weight: 500;
+    color: #444444;
+}
+
+.profile-right {
+    padding: 0 1rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding-bottom: 0;
+}
+
+.profile-right p {
+    font-size: 18px;
+}
+
+.pr-three-childs-container {
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+}
+
+.pr-three-childs-container>div {
+    border: 0.5px solid #b6b6b6;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.pr-three-childs-container h2 {
+    margin-inline: auto;
+    width: fit-content;
+    background-color: #fdc6676d;
+    border: 1.5px solid #fdc667;
+    padding: 0.5rem 1rem;
+    border-radius: 16px;
+    font-weight: 600;
+}
+
+.pr-three-childs-container p {
+    padding: 0 1rem;
+    margin-top: 20px;
+}
+
+.profile-right h1 {
+    font-weight: 600;
+
+}
+
+.right-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 0.5px solid #b6b6b6;
+    border-radius: 12px;
+    padding: 1rem;
+    height: 90%;
+}
+
+.right-info>div {
+    padding: 1rem 0;
+    border-bottom: 1px solid #fe7f5b;
+}
+
+
+/*Admin Only css*/
+.ratings {
+    height: 40px;
+    width: 40px;
+    padding: 0.5rem;
+    background-color: #f8fd67;
+    border-radius: 50%;
+}
+
+.admin-profile-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 90%;
+}
+
+.profile-main {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    align-items: center;
+}
+
+.profile-main img {
+    width: 100%;
+    border: 1px solid #a0a0a0;
+}
+
+.profile-desc {
+    grid-column-start: 2;
+    grid-column-end: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-square-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-square {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    border-radius: 30px;
+    height: 80%;
+    box-shadow: 1px 1px 20px #d4d4d4;
+    background: rgb(253, 219, 50);
+    background: linear-gradient(120deg, rgba(253, 219, 50, 0.5159313725490196) 0%, rgba(250, 250, 250, 1) 40%, rgba(255, 255, 255, 1) 100%);
+
+}
+
+.profile-circle {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: #FDDB32;
+    color: #000;
+}
+
+.profile-circle h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.profile-square h1 {
+    font-weight: 600;
+}
+
+.profile-rectangle {
+      line-height: 1.6;
+    width: 90%;
+    height: 80%;
+    box-shadow: 1px 1px 20px #d4d4d4;
+    border-radius: 30px;
+    padding: 4rem;
+}
+
+.profile-rectangle h1 {
+    font-weight: 500;
 }

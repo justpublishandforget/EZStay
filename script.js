@@ -7,6 +7,8 @@ const iconinfo = document.querySelectorAll(".icon-info");
 const iconbtn = document.querySelectorAll(".iconbtn-1");
 const items = document.querySelectorAll(".items-1");
 
+let cardClickedIndex;
+
 // signIn button
 const signInBtn = document.querySelector(".sign-in-btn");
 signInBtn.addEventListener("click", () => {
@@ -21,7 +23,7 @@ menu.addEventListener("click", function () {
 
     main.style.width = "95%";
     side.style.width = "5%";
-    main.style.marginLeft = "6%";
+    main.style.marginLeft = "0";
     cardContainer.style.gridTemplateColumns =
       "repeat(auto-fit,minmax(110px, 299px))";
     cardContainer.style.gridGap = "3.5rem";
@@ -48,7 +50,7 @@ menu.addEventListener("click", function () {
 
     main.style.width = "83%";
     side.style.width = "15%";
-    main.style.marginLeft = "18%";
+    main.style.marginLeft = "0";
     cardContainer.style.gridTemplateColumns =
       "repeat(auto-fit,minmax(110px, 272px))";
     cardContainer.style.gridGap = "2rem";
@@ -190,6 +192,8 @@ const updateCardsWithData = (hotelData) => {
   const cards = document.querySelectorAll(".card");
   const cardComment = document.querySelectorAll(".card-comment");
   const cardImg = document.querySelectorAll('.card-img');
+  const cardText = document.querySelectorAll('.card-name');
+  
   // console.log(cardImg);
 
   cards.forEach((item, index) => {
@@ -198,11 +202,24 @@ const updateCardsWithData = (hotelData) => {
     item.querySelector("p").innerText = hotelData[index].rating;
     Address[1].innerText = hotelData[index].hotelAddress;
     item.querySelector("span").innerText = "₹ " + hotelData[index].hotelPrice;
-  // console.log(cardImg);
+  
+  //   item.addEventListener('click', () => {
+  //    cardClickedIndex = index;
+  //    console.log(cardClickedIndex);
+  //     window.open('hotelInfo.html', '_blank');
+  // });
+
+    cardImg[index].addEventListener('click', ()=>{
+      window.open('hotelInfo.html', '_blank');
+    })
+    cardText[index].addEventListener('click', ()=>{
+      window.open('hotelInfo.html', '_blank');
+    })
+
+  
 
 
   for (let i = 0; i < 4; i++) {
-    console.log(hotelData[index].imageLinks[i]);
     cardImg[(index * 4) + i].src = hotelData[index].imageLinks[i];
   }
 
@@ -320,4 +337,18 @@ crossCutGuestBox.addEventListener('click',()=>{
   guestBox.style.display = "none";
 })
 
+
+
+
+
+// Hotel info page JS
+
+
+// const hotelName = document.querySelector('#hotelName')
+// const hotelAddress = document.querySelector('#hotelAddress')
+// console.log(hotelName.innerHTML);
+
+// hotelName.innerHTML = hotelData[cardClickedIndex].hotelName;
+// console.log(hotelData[cardClickedIndex].hotelName);
+// console.log(cardClickedIndex);
 

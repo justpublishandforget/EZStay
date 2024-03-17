@@ -242,20 +242,10 @@ const hotelReviews = [
         reviewText: "Felt like royalty during my stay at [Hotel Name]. The exceptional hospitality, luxurious accommodations, and attention to every detail made for an unforgettable experience. Can't wait to return for another regal stay!"
     }
 ];
-bookings.forEach(booking => {
-    const bookingEl = document.createElement('div');
-    bookingEl.classList.add('booking');
-    const bookingContent = ` 
-      <p>${booking.firstName}</p>
-      <div class="status ${booking.status === 'Booked' ? 'booked' : booking.status === 'Pending' ? 'pending' : 'canceled'}">${booking.status}</div>
-      <p>${booking.paymentMode}</p>
-    `;
-    bookingEl.innerHTML = bookingContent;
-    document.querySelector('.bookings-list').appendChild(bookingEl);
-});
 
-const sidebarButtons = document.querySelectorAll('.menu li');
-const sections = document.querySelectorAll('section');
+//main sidebar
+const sidebarButtons = document.querySelectorAll('.menu li'); // sidebar items
+const sections = document.querySelectorAll('section'); // different sections mentioned in sidebar
 
 function hideAllSections() {
     for (let i = 0; i < sections.length; i++) {
@@ -267,13 +257,31 @@ function hideAllSections() {
 for (let i = 0; i < sidebarButtons.length; i++) {
     sidebarButtons[i].addEventListener('click', function () {
         hideAllSections();
-        sections[i].classList.remove('hidden');
-        sidebarButtons[i].classList.add('active');
+        if(i !== 3) {
+            sections[i].classList.remove('hidden');
+            sidebarButtons[i].classList.add('active');
+        }       
     });
 }
 
-const bookingTable = document.querySelector('#all-bookings-list tbody');
-bookings.forEach(booking => {
+// Main Dashboard 
+bookings.forEach(booking => { // render bookings in dashboard
+    const bookingEl = document.createElement('div');
+    bookingEl.classList.add('booking');
+    const bookingContent = ` 
+      <p>${booking.firstName}</p>
+      <div class="status ${booking.status === 'Booked' ? 'booked' : booking.status === 'Pending' ? 'pending' : 'canceled'}">${booking.status}</div>
+      <p>${booking.paymentMode}</p>
+    `;
+    bookingEl.innerHTML = bookingContent;
+    document.querySelector('.bookings-list').appendChild(bookingEl);
+});
+
+
+// Bookings Section
+const bookingTable = document.querySelector('#all-bookings-list tbody'); // Booking section
+
+bookings.forEach(booking => { // render bookings in booking section
     const bookingRow = document.createElement('tr');
     const RowContent = ` 
       <td>${booking.firstName} ${booking.lastName}</td>
@@ -289,10 +297,13 @@ bookings.forEach(booking => {
     bookingTable.appendChild(bookingRow);
 });
 
-const reviewsGrid = document.querySelector('.grid-reviews');
+// Review Section
+
+const reviewsGrid = document.querySelector('.grid-reviews'); // review grid
+
 hotelReviews.forEach(review => {
     const reviewEl = document.createElement('div');
-    reviewEl.classList.add('review');
+    reviewEl.classList.add('review','hover-effect');
     const reviewContent = `
     <div class="profile-header">
     <img src="${review.profileImgUrl}" alt="profile photo" class="profile-image">

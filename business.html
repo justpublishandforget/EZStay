@@ -7,7 +7,8 @@
     <title>EZStay Bussiness</title>
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="/css/business.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 </head>
 
@@ -16,10 +17,10 @@
     <section id="section-1">
         <nav>
             <img src="images/logo.svg" alt="EZStay logo">
-            <button type="submit" class="btn">Log in</button>
+            <button type="submit" class="btn modal-open">Log in</button>
         </nav>
         <div class="main-container">
-        <img src="images/loginPageBackground.svg" alt="" class="background">
+            <img src="images/loginPageBackground.svg" alt="" class="background">
             <div class="container glass">
                 <div class="text">
                     <h1>List your<br>Hotel<br>on EZStay.com</h1>
@@ -102,45 +103,45 @@
         </div>
     </section>
 
-       
-<footer class="footer">
-    <div class="footer-container">
-        <div class="row">
-            <div class="footer-col">
-                <h4>company</h4>
-                <ul>
-                    <li>
-                        <a href="aboutus.html"> about us</a>
-                    </li>
-                    <li>
-                        <a href="#"> our services</a>
-                    </li>
-                    <li>
-                        <a href="business.html"> work with us</a>
-                    </li>
-                    <li>
-                        <a href="#"> press key</a>
-                    </li>
-                </ul>
 
-            </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li>
+                            <a href="#"> about us</a>
+                        </li>
+                        <li>
+                            <a href="#"> our services</a>
+                        </li>
+                        <li>
+                            <a href="#"> work with us</a>
+                        </li>
+                        <li>
+                            <a href="#"> press key</a>
+                        </li>
+                    </ul>
 
-            <div class="footer-col">
-                <h4>get help</h4>
-                <ul>
-                    <li>
-                        <a href="#">FAQ</a>
-                    </li>
-                    <li>
-                        <a href="#">booking status</a>
-                    </li>
-                    <li>
-                        <a href="#">returns</a>
-                    </li>
-                    <li>
-                        <a href="#">payment options</a>
-                    </li>
-                </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#">booking status</a>
+                        </li>
+                        <li>
+                            <a href="#">returns</a>
+                        </li>
+                        <li>
+                            <a href="#">payment options</a>
+                        </li>
+                    </ul>
 
             </div>
 
@@ -158,24 +159,19 @@
                     </li>
                 </ul>
 
-            </div>
-
-            <div class="footer-col">
-                <h4>follow us</h4>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
+                </div>
             </div>
-
-            
-
         </div>
-
-    </div>
-</footer>
+    </footer>
     <!-- Hidden Overlay -->
     <div class="form-container hidden">
         <h2>Hotel Login</h2>
@@ -186,15 +182,27 @@
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
 
-            <button type="submit" class="btn btn-register"><a href="dashboard.html">Register</a></button>
+            <button type="submit" class="btn login-btn" style="width: 100%;">Log In</button>
         </form>
     </div>
     <div class="overlay hidden">
     </div>
+
+     <script src="https://kit.fontawesome.com/5050694ff5.js" crossorigin="anonymous"></script>
     <script>
         const overlay = document.querySelector('.overlay');
-        const signBtn = document.querySelector('.btn');
+        const signBtn = document.querySelector('.modal-open');
         const formContainer = document.querySelector('.form-container');
+        const registerBtn = document.querySelector('.btn-register');
+        const loginBtn = document.querySelector('.login-btn');
+
+        registerBtn.addEventListener('click',function() {
+            window.location.href = 'newBussiness.html';
+        });
+
+        loginBtn.addEventListener('click',function() {
+            window.location.href = 'dashboard.html';
+        });
 
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && !formContainer.classList.contains('hidden')) {
