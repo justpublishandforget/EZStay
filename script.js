@@ -200,13 +200,6 @@ const updateCardsWithData = (hotelData) => {
     item.querySelector("p").innerText = hotelData[index].rating;
     Address[1].innerText = hotelData[index].hotelAddress;
     item.querySelector("span").innerText = "₹ " + hotelData[index].hotelPrice;
-  
-    item.addEventListener('click', () => {
-     cardClickedIndex = index;
-     console.log(cardClickedIndex);
-      window.open('hotelInfo.html', '_blank');
-  });
-  
 
 
   for (let i = 0; i < 4; i++) {
