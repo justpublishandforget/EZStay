@@ -35,6 +35,12 @@ nav {
     width: auto;
 }
 
+/* menu bars */
+.menu-bar{
+    border: none;
+    padding: 50px;
+}
+
 /* navigation bar right side */
 .nav-rightside {
     display: flex;
