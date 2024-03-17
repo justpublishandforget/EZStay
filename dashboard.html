@@ -53,12 +53,12 @@
           <span>Reviews</span>
         </a>
       </li>
-      <li>
+      <!-- <li>
         <a href="#">
           <i class="fas fa-cog"></i>
           <span>Setting</span>
         </a>
-      </li>
+      </li> -->
       <!-- Logout button -->
       <li class="logout">
         <a href="./business.html">
@@ -77,7 +77,7 @@
         <h1>Hotel Admin Dashboard</h1>
       </div>
       <!-- Search bar -->
-      <div class="search">
+      <div class="search hover-effect">
         <input type="text" name="search" placeholder="Search">
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
@@ -85,7 +85,7 @@
     <!-- Info cards -->
     <div class="info-cards-container">
       <!-- Info card: New Bookings -->
-      <div class="info-card">
+      <div class="info-card hover-effect">
         <div class="info-header">
           <p>New Bookings</p>
           <!-- Pill with percentage -->
@@ -98,7 +98,7 @@
         <h4 class="bookings-details">Details ></h4>
       </div>
       <!-- Info card: Total Revenue -->
-      <div class="info-card">
+      <div class="info-card hover-effect">
         <div class="info-header">
           <p>Total Revenue</p>
           <!-- Pill with currency symbol and percentage -->
@@ -111,7 +111,7 @@
         </div>
       </div>
       <!-- Info card: Total Customers -->
-      <div class="info-card">
+      <div class="info-card hover-effect">
         <div class="info-header">
           <p>Total Customers</p>
           <!-- Pill with symbol and percentage -->
@@ -127,7 +127,7 @@
     <!-- Additional info section -->
     <div class="extra-info">
       <!-- Recent bookings -->
-      <div class="recent ex-card">
+      <div class="recent ex-card hover-effect">
         <h1>Recent Bookings</h1>
         <div class="booking">
           <p>Booking Name</p>
@@ -139,7 +139,7 @@
         </div>
       </div>
       <!-- Additional cards (if any) -->
-      <div class="ex-card"></div>
+      <div class="ex-card hover-effect"></div>
     </div>
   </section>
 
@@ -153,6 +153,70 @@
       <div class="search">
         <input type="text" name="search" placeholder="Search">
         <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+    <div class="profile-grid">
+      <div class="profile-left">
+        <div>
+          <div class="hotel-profile">
+            <img src="./images/HA1.webp" alt="">
+            <h1>ITC Chola,Chennai</h1>
+          </div>
+        </div>
+        <div class="profile-extra-info">
+          <ul>
+            <li>
+              <h2><i class="fa-regular fa-circle-check"></i>&ThickSpace; Verified</h2>
+            </li>
+            <li>
+              <h2><i class="fa-regular fa-star"></i>&ThickSpace;Rating 4.5 </h2>
+            </li>
+            <li>
+              <h2><i class="fa-solid fa-hand-holding-dollar"></i>&ThickSpace;Luxury Experience</h2>
+            </li>
+            <li>
+              <h2><i class="fa-solid fa-clipboard-user"></i> &ThickSpace; Experienced Staff</h2>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="profile-right">
+        <div class="right-info ">
+          <div>
+            <h1>ITC Chola, Chennai</h1>
+            <h1>Experience An Era Of Magnificence & Splendour</h1>
+          </div>
+          <p>
+            With its awe-inspiring size and grandeur, ITC Grand Chola is a veritable destination unto itself. Located in the heart of Chennai the hotel is a palatial tribute to Southern India’s greatest empires – the Imperial Cholas. There are four separate entry points, each with its distinct artistic identity.
+          </p>
+        </div>
+        <div class="pr-three-childs-container">
+          <div>
+            <h2>Location</h2>
+            <p>
+              63,<br> Anna Salai,<br> Little Mount,<br> Guindy, Chennai,<br> Tamil Nadu 600032,<br>India
+            </p>
+          </div>
+          <div>
+            <h2>Contact</h2>
+            <p>
+              <br>
+              Contact Numbers <br>
+              +91 44 22200000 <br>
+              +91 44 22200200 <br>
+              Email id: <br>
+              reservations@itchotels.in
+            </p>
+          </div>
+          <div>
+            <h2>Toll Free</h2>
+            <p>
+              <br><br>
+              1-800-419-6444, <br>
+              1-800-102-2333
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -210,13 +274,12 @@
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
     </div>
-
     <div class="grid-reviews">
-      
+      <!-- reviews will be populated dynamically -->
     </div>
   </section>
-  <section class="settings hidden">
-    <!-- Settings section header and search bar -->
+  <!-- <section class="settings hidden">
+    Settings section header and search bar
     <div class="header-wrapper">
       <div class="header-title">
         <h1>Settings</h1>
@@ -226,7 +289,7 @@
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- Font Awesome script -->
   <script src="https://kit.fontawesome.com/5050694ff5.js" crossorigin="anonymous"></script>
   <!-- Custom JavaScript file for dashboard functionality -->
