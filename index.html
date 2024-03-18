@@ -49,20 +49,23 @@
         </div>
         <div class="items-1">
           <button class="iconbtn-1">
-            <i class="ri-compass-3-fill"></i>
-            <p class="icon-info">Explore</p>
+            <a href="userdashboard.html">
+              <i class="ri-compass-3-fill"></i>
+            <p class="icon-info">Dashboard</p>
+            </a>
+            
           </button>
         </div>
-        <div class="items-1">
+        <!-- <div class="items-1">
           <button class="iconbtn-1">
             <i class="ri-hotel-bed-fill"></i>
             <p class="icon-info">Stays</p>
           </button>
-        </div>
+        </div> -->
         <div class="items-1">
           <button class="iconbtn-1">
             <i class="ri-hotel-line"></i>
-            <p class="icon-info">Hotels</p>
+            <p class="icon-info"><a href="#hotels">Hotels</a></p>
           </button>
         </div>
         <div class="items-1">
@@ -74,13 +77,19 @@
         <div class="items-1">
           <button class="iconbtn-1">
             <i class="ri-heart-fill"></i>
-            <p class="icon-info">Trips</p>
+            <p class="icon-info"><a href="tripguide.html">Trips</a></p>
           </button>
         </div>
         <div class="items-1">
           <button class="iconbtn-1">
             <i class="ri-feedback-fill"></i>
-            <p class="icon-info">Feedback</p>
+            <p class="icon-info"><a href="feedback.html">Feedback</a></p>
+          </button>
+        </div>
+        <div class="items-1">
+          <button class="iconbtn-1">
+            <i class="ri-hotel-bed-fill"></i>
+            <p class="icon-info">Stays</p>
           </button>
         </div>
 
@@ -147,7 +156,7 @@
       </div>
       <h2>Hotels near you</h2>
 
-      <div class="card-container"></div>
+      <div class="card-container" id="hotels"></div>
 
       <!-- Drop down on guest in search bar -->
       <div class="guest-box">
@@ -157,12 +166,12 @@
             <p>Ages 13 or above</p>
           </div>
 
-            <div class="guestIncr">
-              <i class="ri-subtract-line subGuest"></i>
-              <p class="noOfGuest">1</p>
-              <i class="ri-add-line addGuest"></i>
-            </div>
+          <div class="guestIncr">
+            <i class="ri-subtract-line subGuest"></i>
+            <p class="noOfGuest">1</p>
+            <i class="ri-add-line addGuest"></i>
           </div>
+        </div>
 
         <hr class="hr" />
 
@@ -172,105 +181,105 @@
             <p>Below 13</p>
           </div>
 
-            <div class="guestIncr">
-              <i class="ri-subtract-line subGuest"></i>
-              <p class="noOfGuest">1</p>
-              <i class="ri-add-line addGuest"></i>
-            </div>
+          <div class="guestIncr">
+            <i class="ri-subtract-line subGuest"></i>
+            <p class="noOfGuest">1</p>
+            <i class="ri-add-line addGuest"></i>
           </div>
+        </div>
 
         <button class="crossCut-guest-box">&times;</button>
 
-          </div>
-          
+      </div>
+
+
+    </div>
+
+
+
+
+    </div>
+  </section>
+  <!-- End of Section -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li>
+              <a href="./aboutus.html"> about us</a>
+            </li>
+            <li>
+              <a href="./services.html"> our services</a>
+            </li>
+            <li>
+              <a href="./business.html"> work with us</a>
+            </li>
+            <li>
+              <a href="#"> press key</a>
+            </li>
+          </ul>
 
         </div>
 
-        
-        
-        
-      </div>
-    </section>
-    <!-- End of Section -->
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li>
+              <a href="#">FAQ</a>
+            </li>
+            <li>
+              <a href="#">booking status</a>
+            </li>
+            <li>
+              <a href="#">returns</a>
+            </li>
+            <li>
+              <a href="#">payment options</a>
+            </li>
+          </ul>
 
-    <footer class="footer">
-      <div class="container">
-          <div class="row">
-              <div class="footer-col">
-                  <h4>company</h4>
-                  <ul>
-                      <li>
-                          <a href="#"> about us</a>
-                      </li>
-                      <li>
-                          <a href="#"> our services</a>
-                      </li>
-                      <li>
-                          <a href="#"> work with us</a>
-                      </li>
-                      <li>
-                          <a href="#"> press key</a>
-                      </li>
-                  </ul>
-  
-              </div>
-  
-              <div class="footer-col">
-                  <h4>get help</h4>
-                  <ul>
-                      <li>
-                          <a href="#">FAQ</a>
-                      </li>
-                      <li>
-                          <a href="#">booking status</a>
-                      </li>
-                      <li>
-                          <a href="#">returns</a>
-                      </li>
-                      <li>
-                          <a href="#">payment options</a>
-                      </li>
-                  </ul>
-  
-              </div>
-  
-              <div class="footer-col">
-                  <h4>learn more</h4>
-                  <ul>
-                      <li>
-                          <a href="#">privacy</a>
-                      </li>
-                      <li>
-                          <a href="#">security</a>
-                      </li>
-                      <li>
-                          <a href="#">terms</a>
-                      </li>
-                  </ul>
-  
-              </div>
-  
-              <div class="footer-col">
-                  <h4>follow us</h4>
-                      <div class="social-links">
-                          <a href="#"><i class="fab fa-facebook-f"></i></a>
-                          <a href="#"><i class="fab fa-twitter"></i></a>
-                          <a href="#"><i class="fab fa-instagram"></i></a>
-                          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                      </div>
-              </div>
-  
-              
-  
+        </div>
+
+        <div class="footer-col">
+          <h4>learn more</h4>
+          <ul>
+            <li>
+              <a href="./learnmore.html">privacy</a>
+            </li>
+            <li>
+              <a href="./learnmore.html">security</a>
+            </li>
+            <li>
+              <a href="./learnmore.html">terms</a>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
           </div>
-  
-      </div>
-  </footer>
+        </div>
 
-    <!-- Script -->
-    <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/5050694ff5.js" crossorigin="anonymous"></script>
-    
+
+
+      </div>
+
+    </div>
+  </footer>
+  <!-- Script -->
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/5050694ff5.js" crossorigin="anonymous"></script>
+
 
 </body>
 

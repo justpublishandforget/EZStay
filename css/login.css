@@ -32,7 +32,7 @@
   padding: 2vh 2vw;
   font-size: 17px;
   width: 32vw;
-  height: 60vh;
+  height: max-content;
   background-color: white;
   border-radius: 10px;
   box-shadow: 2px 2px 15px rgb(140, 140, 140);
@@ -73,4 +73,21 @@
 .login-text {
   display: flex;
   justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Feedback */
+
+.feedback h1{
+  font-size: 3rem;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  /* background-color: white; */
+  padding: 2rem;
 }
