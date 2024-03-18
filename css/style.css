@@ -127,6 +127,9 @@ nav {
     align-items: center;
     margin-left: 3px;
 }
+.iconbtn-1 a{
+    display: flex;
+}
 
 .iconbtn-2 {
     background-color: white;
