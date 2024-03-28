@@ -163,6 +163,17 @@ const bookings = [
         roomType: 'Double',
         status: 'Pending',
         paymentMode: 'Credit'
+    },
+    {
+        firstName: 'harsh',
+        lastName: 'patil',
+        gender: 'male',
+        email: 'harsh@example.com',
+        arrivalDate: '2024-03-23',
+        departureDate: '2024-03-26',
+        roomType: 'Double',
+        status: 'Pending',
+        paymentMode: 'UPi'
     }
 ];
 const hotelReviews = [

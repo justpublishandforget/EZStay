@@ -22,6 +22,18 @@ const bookings = [
         roomType: 'Double',
         status: 'Canceled',
         paymentMode: 'Credit'
+    },
+    {
+        firstName: 'sahil',
+        lastName: 'kasare',
+        HotelName: ' itc Palace',
+        gender: 'Male',
+        email: 'vedant.nikam@example.com',
+        arrivalDate: '2024-04-11',
+        departureDate: '2024-04-13',
+        roomType: 'Double',
+        status: 'Booked',
+        paymentMode: 'UPI'
     }
     
 ];
