@@ -81,7 +81,7 @@ menu.addEventListener("click", function () {
 // Function to fetch hotel data from JSON file
 const fetchHotelData = async () => {
   try {
-    const response = await fetch('./HotelData/hotelData.json'); 
+    const response = await fetch('../../HotelData/hotelData.json'); 
     const data = await response.json();
     return data;
   } catch (error) {
@@ -103,10 +103,10 @@ const createCard = () => {
 
   card.innerHTML = `<div class="card">
                       <div class="card-img-scroll">
-                          <img class="card-img" src="./images/HA2.jpg" alt="" />
-                          <img class="card-img" src="./images/HA1.webp" alt="" />
-                          <img class="card-img" src="./images/HA3.jpg" alt="" />
-                          <img class="card-img" src="./images/HA4.jpg" alt="" />
+                          <img class="card-img" src="../images/HA2.jpg" alt="" />
+                          <img class="card-img" src="../images/HA1.webp" alt="" />
+                          <img class="card-img" src="../images/HA3.jpg" alt="" />
+                          <img class="card-img" src="../images/HA4.jpg" alt="" />
                       </div>
 
                       <button class="card-img-scroll-right">></button>

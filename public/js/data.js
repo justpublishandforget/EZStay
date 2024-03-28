@@ -252,10 +252,10 @@ const createCard = () => {
 
   card.innerHTML = `<div class="card">
                       <div class="card-img-scroll">
-                          <img class="card-img" src="./images/HA2.jpg" alt="" />
-                          <img class="card-img" src="./images/HA1.webp" alt="" />
-                          <img class="card-img" src="./images/HA3.jpg" alt="" />
-                          <img class="card-img" src="./images/HA4.jpg" alt="" />
+                          <img class="card-img" src="../images/HA2.jpg" alt="" />
+                          <img class="card-img" src="../images/HA1.webp" alt="" />
+                          <img class="card-img" src="../images/HA3.jpg" alt="" />
+                          <img class="card-img" src="../images/HA4.jpg" alt="" />
                       </div>
 
                       <button class="card-img-scroll-right">></button>
