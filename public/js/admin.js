@@ -169,67 +169,67 @@ const bookings = [
 ];
 const ezstayReviews = [
     {
-      profileImgUrl: "./images/people/girl1.jpg",
+      profileImgUrl: "../images/people/girl1.jpg",
       name: "Priya",
       reviewText: "Just booked a hotel through ezstay and already planning my next trip! The website was easy to navigate, and I found the perfect hotel within minutes. Highly recommend!"
     },
     {
-      profileImgUrl: "./images/people/boy1.jpeg",
+      profileImgUrl: "../images/people/boy1.jpeg",
       name: "Rajesh",
       reviewText: "My experience with ezstay was fantastic. From the wide selection of hotels to the seamless booking process, everything exceeded my expectations. Can't wait to use it again!"
     },
     {
-      profileImgUrl: "./images/people/girl2.jpeg",
+      profileImgUrl: "../images/people/girl2.jpeg",
       name: "Neha",
       reviewText: "For the convenience and value, ezstay is unbeatable. I found a great hotel at an affordable price, and the entire booking process was hassle-free. Will definitely be using it for my future trips!"
     },
     {
-      profileImgUrl: "./images/people/boy2.jpeg",
+      profileImgUrl: "../images/people/boy2.jpeg",
       name: "Ankit",
       reviewText: "Just used ezstay to book a hotel for my trip, and I'm impressed! The platform provided detailed information about each hotel, making it easy to choose the perfect one. Highly recommend!"
     },
     {
-      profileImgUrl: "./images/people/girl3.jpeg",
+      profileImgUrl: "../images/people/girl3.jpeg",
       name: "Ayesha",
       reviewText: "Whether it's for business or leisure, ezstay is my go-to for booking hotels. The website is user-friendly, and I always find great deals on accommodations. Highly recommend for all travelers!"
     },
     {
-      profileImgUrl: "./images/people/boy3.jpeg",
+      profileImgUrl: "../images/people/boy3.jpeg",
       name: "Sameer",
       reviewText: "Just discovered ezstay, and it's a game-changer! Booking hotels has never been this convenient. With its easy-to-use interface and wide range of options, I'll definitely be using it for all my future trips."
     },
     {
-      profileImgUrl: "./images/people/girl4.jpeg",
+      profileImgUrl: "../images/people/girl4.jpeg",
       name: "Kavya",
       reviewText: "Recently booked a hotel through ezstay, and it exceeded my expectations. The platform made it easy to compare prices and amenities, ensuring I got the best deal. Highly recommend!"
     },
     {
-      profileImgUrl: "./images/people/boy4.jpeg",
+      profileImgUrl: "../images/people/boy4.jpeg",
       name: "Ravi",
       reviewText: "Kudos to ezstay for making hotel booking a breeze! The website is intuitive, and the customer service is top-notch. Will definitely be recommending it to friends and family!"
     },
     {
-      profileImgUrl: "./images/people/girl5.jpeg",
+      profileImgUrl: "../images/people/girl5.jpeg",
       name: "Preeti",
       reviewText: "Impressed by the seamless experience with ezstay. Booking hotels has never been this convenient. With its user-friendly interface and great deals, it's become my preferred platform for all my travels."
     },
     {
-      profileImgUrl: "./images/people/boy5.jpeg",
+      profileImgUrl: "../images/people/boy5.jpeg",
       name: "Vivek",
       reviewText: "As a frequent traveler, I rely on ezstay for all my hotel bookings. The platform offers a wide selection of hotels at competitive prices, and the booking process is quick and easy. Highly recommend!"
     },
     {
-      profileImgUrl: "./images/people/girl6.jpeg",
+      profileImgUrl: "../images/people/girl6.jpeg",
       name: "Sneha",
       reviewText: "Just had a stress-free experience booking a hotel through ezstay. The platform is user-friendly, and I found a great hotel at a great price. Will definitely be using it for my future trips!"
     },
     {
-      profileImgUrl: "./images/people/boy6.jpeg",
+      profileImgUrl: "../images/people/boy6.jpeg",
       name: "Aman",
       reviewText: "Recently used ezstay to book a romantic getaway, and it was perfect! The platform helped me find the ideal hotel with all the amenities we needed for a memorable stay. Highly recommend for couples!"
     },
     {
-      profileImgUrl: "./images/people/girl7.jpeg",
+      profileImgUrl: "../images/people/girl7.jpeg",
       name: "Shraddha",
       reviewText: "ezstay made booking a hotel for my trip effortless. With its intuitive interface and extensive hotel options, I was able to find the perfect accommodation within minutes. Highly recommend for all travelers!"
     },
