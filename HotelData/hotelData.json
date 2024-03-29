@@ -5,10 +5,10 @@
       "hotelAddress": "Chennai",
       "hotelPrice": 10000,
       "imageLinks": [
-        "../public/images/HA2.jpg",
-        "../public/images/HA1.webp",
-        "../public/images/HA3.jpg",
-        "../public/images/HA4.jpg"
+        "../views/images/HA2.jpg",
+        "../views/images/HA1.webp",
+        "../views/images/HA3.jpg",
+        "../views/images/HA4.jpg"
       ],
       "rating": 4.5,
       "flag": 0

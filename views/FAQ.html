@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EZYSTAY FAQs</title>
+  <link rel="stylesheet" href="css/FAQ's.css">
+</head>
+<body>
+    <nav>
+        <!-- Left side of navigation bar -->
+        <div class="nav-leftside">
+          
+          <img class="logo" src="images/logo.svg" alt="img" />
+        </div>
+    
+        <!-- Right side of navigation bar -->
+        <div class="nav-rightside">
+          <div class="bookmark">
+            
+         
+      </nav>
+  <main>
+    <section>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <div class="question-box">
+          <h3 class="question">1. How do I book a hotel on EZYSTAY?</h3>
+          <div class="answer">
+            <p>Booking a hotel on EZYSTAY is easy! Simply visit our website or download our mobile app, enter your destination and travel dates, and browse through the available hotel options. Once you've found the perfect hotel, follow the prompts to complete your booking securely online.</p>
+          </div>
+        </div>
+        <div class="question-box">
+          <h3 class="question">2. What payment methods do you accept?</h3>
+          <div class="answer">
+            <p>We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. You can also choose to pay with PayPal or other third-party payment providers, depending on your preferences and availability.</p>
+          </div>
+        </div>
+        <div class="question-box">
+          <h3 class="question">3. Can I modify or cancel my reservation?</h3>
+          <div class="answer">
+            <p>Yes, in most cases, you can modify or cancel your reservation through your EZYSTAY account. However, please note that the specific terms and conditions for modifications and cancellations may vary depending on the hotel and rate you've booked. We recommend reviewing the cancellation policy carefully before making your reservation.</p>
+          </div>
+        </div>
+        <div class="question-box">
+          <h3 class="question">4. Is my payment information secure?</h3>
+          <div class="answer">
+            <p>Yes, EZYSTAY takes the security of your payment information seriously. We use industry-standard encryption technology to protect your data during transmission. Additionally, we adhere to strict security protocols and comply with all applicable regulations to ensure the safety and privacy of your payment information.</p>
+          </div>
+        </div>
+        <div class="question-box">
+          <h3 class="question">5. Do you offer customer support?</h3>
+          <div class="answer">
+            <p>Absolutely! Our customer support team is available 24/7 to assist you with any questions or concerns you may have. Whether you need help with booking a hotel, modifying a reservation, or resolving an issue during your stay, our dedicated support staff is here to help you every step of the way.</p>
+          </div>
+        </div>
+        <div class="question-box">
+          <h3 class="question">6. Can I earn rewards with EZYSTAY?</h3>
+          <div class="answer">
+            <p>Yes, EZYSTAY offers a rewards program for frequent travelers. By signing up for our loyalty program, you can earn points for every booking you make, which can be redeemed for discounts, free nights, and other exclusive benefits. Joining is free, so start earning rewards on your next trip!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add more sections for other FAQ categories -->
+
+  </main>
+  <footer>
+    <p>© 2024 EZYSTAY. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const questions = document.querySelectorAll('.question');
+
+      questions.forEach(question => {
+        question.addEventListener('click', function() {
+          this.parentNode.classList.toggle('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
