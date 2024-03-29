@@ -3,4 +3,4 @@
 
 ## Screenshots
 ### Login Page
-![login page screenshot](/images/screenshots/login.png)
+![login page screenshot](./public/images/screenshots/login.png)
