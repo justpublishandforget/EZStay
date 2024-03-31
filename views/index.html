@@ -29,8 +29,18 @@
       <div class="bookmark">
         <i class="ri-heart-fill"></i>
       </div>
-      <button class="btn sign-in-btn">Sign in</button>
-      
+      <!-- <a href="login.html"><button class="btn sign-in-btn">Sign in</button></a> -->
+      <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+        
+        if (username) {
+          document.write('<button class="btn sign-in-btn">' + username + '</button>');
+        } else {
+          document.write('<a href="login.html"><button class="btn sign-in-btn">Sign in</button></a>');
+        }
+      </script>
+     
     </div>
   </nav>
   <!-- Navigation Bar End -->
@@ -44,10 +54,21 @@
         <div class="items-1">
           <button class="iconbtn-1">
             <i class="ri-account-circle-fill"></i>
+            <!-- <a href="login.html" class="icon-info">Sign in</a> -->
+            <script>
+              const urlParam = new URLSearchParams(window.location.search);
+              const usernam = urlParam.get('username');
+              if (usernam) {
+                document.write('<a href="/logout" class="icon-info">Sign out</a>');
+          } else {
+            document.write('<a href="login.html" class="icon-info">Sign in</a>');
+              }
 
-            <a href="login.html" class="icon-info">Sign in</a>
+            </script>
           </button>
         </div>
+
+
         <div class="items-1">
           <button class="iconbtn-1">
             <a href="userdashboard.html">
@@ -110,8 +131,13 @@
       <span>Discover your new favourite stay</span>
 
       <!-- Search, Date, Time Booking Bar -->
+      
+
+<!-- ************************************************************************ -->
+
       <div class="search">
         <form action="">
+
           <div class="search-bar-divs">
             <label>Where</label>
             <input type="text" placeholder="Destination" />
@@ -122,24 +148,14 @@
             <input type="date" placeholder="Add dates" />
           </div>
 
-          <!-- <div class="search-bar-divs">
+          <div class="search-bar-divs">
             <label>Check out<output></output></label>
             <input type="date" placeholder="add dates" />
-          </div> -->
-          <div class="search-bar-divs">
-            <label>age<output></output></label>
-            <input type="text" placeholder="age" />
           </div>
 
           <div class="search-bar-divs Who">
             <label>Who</label>
             <input type="text" placeholder="guest" />
-            <!--             
-            <select name="adults" id="adults">
-              <option value="1"> Adult (Age 13 or above)</option>
-              <option value="2"> Children (Ages 2–12)</option>
-              <option value="3"> Infants (Under 2)</option>
-            </select> -->
           </div>
 
           <div>
@@ -147,8 +163,12 @@
               <i class="ri-search-line"></i>
             </button>
           </div>
+
         </form>
       </div>
+
+<!-- ******************************************************************* -->
+
 
       <div class="bigImage">
         <img class="hero-img" src="images/kerala-image.png" alt="" />
@@ -282,6 +302,9 @@
     </div>
   </footer>
   <!-- Script -->
+
+ 
+ 
   
   <script src="js/script.js"></script>
   <script src="https://kit.fontawesome.com/5050694ff5.js" crossorigin="anonymous"></script>

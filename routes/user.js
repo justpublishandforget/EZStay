@@ -44,16 +44,41 @@ router.post('/login', async (req, res) => {
       res.status(401).send('Invalid username or password');
     } else {
       req.session.user = user;
-      res.redirect('/index.html');
+      
+      res.redirect('/index.html?username=' + encodeURIComponent(username));
+     
     }
   } catch (err) {
     console.error(err);
-    // res.status(500).send('Error logging in');
+    
     res.status(500).send(`Error loging in: ${err.message}`);
   }
 });
 
 
+//index
+router.get('/index.html', (req, res) => {
+  if (!req.session.user) {
+    res.redirect('/login');
+  } else {
+    res.render('index.html', { username: req.session.user.username });
+  }
+});
+
+
+
+
+// Logout
+router.get('/logout', (req, res) => {
+  req.session.destroy(err => {
+    if (err) {
+      console.error(err);
+      res.status(500).send('Error logging out');
+    } else {
+      res.redirect('/index.html');
+    }
+  });
+});
 
 
 
