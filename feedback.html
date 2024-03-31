@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link href="css/login.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container-login">
+        <img src="images/logo.svg" alt="EZ Stay logo">
+        <div class="login-form" style="height: max-content;">
+            <h3 style="font-weight: 600; font-size: 25px;">Submit your valuable feedback</h3>
+            <br>
+            <form>
+                <label for="username">Name</label><br>
+                <input type="text" name="username" id="username" placeholder="username" required>
+                <label for="email">Email</label><br>
+                <input type="email" placeholder="email" required>
+                <label>Feedback</label><br>
+                <input type="text" placeholder="feedback" required style="height: 15vh;">
+                 <button class="btn-sign">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="hidden feedback">
+        <h1>Thanks for your feedback</h1>
+    </div>
+    <img src="images/loginPageBackground.svg" alt="" id="background-login">
+   
+    
+    <script>
+        const form = document.querySelector('.login-form');  
+        const submit = document.querySelector('.btn-sign');
+        const feedback = document.querySelector('.feedback');
+        submit.addEventListener('click',function() {
+          form.classList.add('hidden');
+          feedback.classList.remove('hidden');
+        })
+    </script>
+</body>
+
+</html>
