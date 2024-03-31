@@ -1,20 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-</head>
-<body>
-    <h1>Sign Up</h1>
-    <form action="/signup" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <br><br>
-        <button type="submit">Sign Up</button>
-    </form>
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link href="css/login.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+    <div class="container-login" style="margin: 0;">
+      <div class="login-form" style="height: max-content;">
+        <h3 style="font-weight: 600; font-size: 25px;">Create your account</h3>
+        <br>
+        <form>
+          <label for="username">Your full name</label><br>
+          <input type="text" name="username" id="username" placeholder="full name" required>
+          <label for="email">Email</label><br>
+          <input type="email" placeholder="youremailid@gmail.com" required>
+          <label for="phone-number">Phone Number</label>
+          <input type="tel" name="phone" placeholder="123456789"> 
+          <label for="password">Password</label><br>
+          <label for="dob">Date of Birth</label>
+          <input type="date" name="dob">  
+            <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="password" required>
+          <button class="btn-sign">Sign up</button>
+        </form>
+
+      </div>
+    </div>
+    <img src="images/loginPageBackground.svg" alt="" id="background-login">
+    <script>
+    const loginBtn = document.querySelector('.btn-sign');
+
+    loginBtn.addEventListener('click', function () {
+      window.location.href = 'dashboard.html';
+    });
+    </script>
+  </body>
+
 </html>
 
