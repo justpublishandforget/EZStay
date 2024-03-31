@@ -10,10 +10,10 @@ const items = document.querySelectorAll(".items-1");
 let cardClickedIndex;
 
 // signIn button
-const signInBtn = document.querySelector(".sign-in-btn");
-signInBtn.addEventListener("click", () => {
-  window.location.href = "./login.html";
-});
+// const signInBtn = document.querySelector(".sign-in-btn");
+// signInBtn.addEventListener("click", () => {
+//   window.location.href = "./login.html";
+// });
 
 var count = 0;
 menu.addEventListener("click", function () {

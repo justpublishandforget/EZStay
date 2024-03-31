@@ -13,13 +13,16 @@ const app = express();
 
 const url = 'mongodb://127.0.0.1:27017/ezstay'
 
-mongoose.connect(url);
+main().catch(err => console.log(err));
 
-const con = mongoose.connection;
+async function main() {
+  await mongoose.connect(url);
 
-con.on('open', function(){
-    console.log('mongodb connected');
-})
+ 
+  console.log('mongoose connected');
+}
+
+
 
 // middleware
 app.use(express.urlencoded({ extended: true }));

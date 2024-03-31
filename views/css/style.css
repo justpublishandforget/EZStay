@@ -69,6 +69,16 @@ nav {
 }
 
 
+.username {
+    padding: 5px 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    background-color: #FDDB32;
+    border: none;
+    border-radius: 10px;
+}
+
+
 /* navigation bar left side */
 .nav-leftside {
     display: flex;

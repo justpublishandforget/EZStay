@@ -29,8 +29,18 @@
       <div class="bookmark">
         <i class="ri-heart-fill"></i>
       </div>
-      <button class="btn sign-in-btn">Sign in</button>
-      
+      <!-- <a href="login.html"><button class="btn sign-in-btn">Sign in</button></a> -->
+      <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+        
+        if (username) {
+          document.write('<button class="btn sign-in-btn">' + username + '</button>');
+        } else {
+          document.write('<a href="login.html"><button class="btn sign-in-btn">Sign in</button></a>');
+        }
+      </script>
+     
     </div>
   </nav>
   <!-- Navigation Bar End -->
@@ -44,10 +54,21 @@
         <div class="items-1">
           <button class="iconbtn-1">
             <i class="ri-account-circle-fill"></i>
+            <!-- <a href="login.html" class="icon-info">Sign in</a> -->
+            <script>
+              const urlParam = new URLSearchParams(window.location.search);
+              const usernam = urlParam.get('username');
+              if (usernam) {
+                document.write('<a href="/logout" class="icon-info">Sign out</a>');
+          } else {
+            document.write('<a href="login.html" class="icon-info">Sign in</a>');
+              }
 
-            <a href="login.html" class="icon-info">Sign in</a>
+            </script>
           </button>
         </div>
+
+
         <div class="items-1">
           <button class="iconbtn-1">
             <a href="userdashboard.html">
@@ -282,6 +303,9 @@
     </div>
   </footer>
   <!-- Script -->
+
+ 
+ 
   
   <script src="js/script.js"></script>
   <script src="https://kit.fontawesome.com/5050694ff5.js" crossorigin="anonymous"></script>
