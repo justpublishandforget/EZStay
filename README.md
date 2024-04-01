@@ -2,29 +2,6 @@
 >Online Hotel Booking Platform
 > Group 35
 
-## Screenshots
-### Login Page
-![login page screenshot](./views/images/screenshots/login.png)
-
-### Home Page
-![index page screenshot](./views/images/screenshots/index1.png)
-![footer  screenshot](./views/images/screenshots/index2.png)
-
-### Business Page
-![business page screenshot](./views/images/screenshots/biz.png)
-
-### Dashboards
-
-__Hotel Admin__  
-![hotel admin page screenshot](./views/images/screenshots/hotelAdmin.png)
-
-__Admin__  
-![admin page screenshot](./views/images/screenshots/admin.png)
-![review page screenshot](./views/images/screenshots/reviews.png)
-
-__User__  
-![user dashboard](./views/images/screenshots/userDashboard.png) 
-
 ## Run Locally
 
 1.Clone the repository using git
@@ -48,3 +25,27 @@ npm install
 npm start
 ```
 the server will run on localhost:3000
+
+## Screenshots
+### Login Page
+![login page screenshot](./views/images/screenshots/login.png)
+
+### Home Page
+![index page screenshot](./views/images/screenshots/index1.png)
+![footer  screenshot](./views/images/screenshots/index2.png)
+
+### Business Page
+![business page screenshot](./views/images/screenshots/biz.png)
+
+### Dashboards
+
+__Hotel Admin__  
+![hotel admin page screenshot](./views/images/screenshots/hotelAdmin.png)
+
+__Admin__  
+![admin page screenshot](./views/images/screenshots/admin.png)
+![review page screenshot](./views/images/screenshots/reviews.png)
+
+__User__  
+![user dashboard](./views/images/screenshots/userDashboard.png) 
+
