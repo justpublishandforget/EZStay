@@ -79,22 +79,33 @@ menu.addEventListener("click", function () {
 // json file data
 
 // Function to fetch hotel data from JSON file
-const fetchHotelData = async () => {
-  try {
-    const response = await fetch('../../HotelData/hotelData.json'); 
-    const data = await response.json();
-    return data;
-  } catch (error) {
+// const fetchHotelData = async () => {
+//   try {
+//     const response = await fetch('../../HotelData/hotelData.json'); 
+//     const data = await response.json();
+//     return data;
+//   } catch (error) {
+//     console.error('Error fetching hotel data:', error);
+//   }
+// };
+
+// // Call the function to fetch data
+// fetchHotelData().then(hotelData => {
+
+//   updateCardsWithData(hotelData);
+// });
+
+//******************************************************* */
+// Fetch hotel data from server
+fetch('/hoteldata')
+  .then(response => response.json())
+  .then(hotelData => {
+    // Call the function to update UI cards with the fetched data
+    updateCardsWithData(hotelData);
+  })
+  .catch(error => {
     console.error('Error fetching hotel data:', error);
-  }
-};
-
-// Call the function to fetch data
-fetchHotelData().then(hotelData => {
-
-  updateCardsWithData(hotelData);
-});
-
+  });
 // ***********************************************************
 
 // creating card

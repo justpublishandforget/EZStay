@@ -6,12 +6,15 @@ const path = require('path');
 const crypto = require('crypto');
 
 
+
 const secretKey = crypto.randomBytes(64).toString('hex');
 
 
 const app = express();
 
-const url = 'mongodb://127.0.0.1:27017/ezstay'
+
+// MongoDB connection setup
+ global.url = 'mongodb://127.0.0.1:27017/ezstay'
 
 main().catch(err => console.log(err));
 
@@ -24,7 +27,7 @@ async function main() {
 
 
 
-// middleware
+// Middleware setup
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
@@ -37,20 +40,21 @@ app.use(session({
 
 
 
-///////
+// Serve static files
 
 global.staticpath = path.join(__dirname, "views");
-
-
-
-
 app.use(express.static(staticpath));
 
 
-
+// Routes setup
+const hotelroutes = require('./routes/hotel');
+app.use('/', hotelroutes);
 
 const userroutes = require('./routes/user');
 app.use('/', userroutes);
+
+
+// Start the server
 
 app.listen(3000, function(){
     console.log('server started');
