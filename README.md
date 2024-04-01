@@ -39,7 +39,8 @@ cd EZStay
 
 3.Install Dependencies
 ```
-npm install cookie-parser express express-session mongodb mongoose nodemon
+npm install
+# this packages will be installed cookie-parser express express-session mongodb mongoose nodemon
 ```
 
 4.Run the server
