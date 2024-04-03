@@ -41,7 +41,7 @@ exports.accessUser = async (req, res) => {
             } else {
               req.session.user = user;
               
-              res.redirect('/index.html?username=' + encodeURIComponent(username));
+              res.redirect('/index');
              
             }
           } catch (err) {
@@ -53,12 +53,37 @@ exports.accessUser = async (req, res) => {
 
 //index
 exports.index = async (req, res) => {
-    if (!req.session.user) {
-            res.redirect('/login');
-          } else {
-            res.render('index.html', { username: req.session.user.username });
-          }
+  if (!req.session.user) {
+    res.redirect('/login');
+  } else {
+    
+    res.render('index', { user: req.session.user });
+   
+  } 
 };
+
+// root
+exports.root = async (req, res) => {
+  if (!req.session.user) {
+    res.redirect('/login');
+  } else {
+    
+    res.render('index', { user: req.session.user });
+   
+  }
+
+};
+
+//personalinfo
+exports.personalinfo = async (req, res) => {
+  if (!req.session.user) {
+    res.redirect('/login');
+  } else {
+    
+    res.render('personalinfo', { user: req.session.user });
+   
+  }
+}
 
 
 
@@ -69,7 +94,7 @@ exports.logout = async (req, res) => {
               console.error(err);
               res.status(500).send('Error logging out');
             } else {
-              res.redirect('/index.html');
+              res.redirect('/login');
             }
           });
 }

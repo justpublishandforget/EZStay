@@ -290,7 +290,7 @@ bookmark.addEventListener('click', function(){
       <p>₹ ${item.hotelPrice}</p>
       <p>&#11088;${item.rating}</p>
       
-      <!-- Add more details as needed -->
+     
     `;
     modal.appendChild(bookmarkedItem);
   });

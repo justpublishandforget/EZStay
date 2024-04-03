@@ -20,8 +20,8 @@
    <h1>Personal info</h1>
    <div class="box">
     <div class="left-side">
-        <p class="title">Legal name</p>
-        <p class="answer">Vedant Nikam</p>
+        <p class="title">Name</p>
+        <p class="answer"><%= user.fullname %></p>
     </div>
     <div class="right-side">
         <button class="btn">Update</button>
@@ -34,8 +34,8 @@
 
    <div class="box">
     <div class="left-side">
-        <p class="title">Email address</p>
-        <p class="answer">vedantnikam123@gmail.com</p>
+        <p class="title">Username</p>
+        <p class="answer"><%= user.username %></p>
     </div>
     <div class="right-side">
         <button class="btn">Update</button>
@@ -50,8 +50,8 @@
 
    <div class="box">
     <div class="left-side">
-        <p class="title">Phone number</p>
-        <p class="answer">9393939393</p>
+        <p class="title">Email</p>
+        <p class="answer"><%= user.email %></p>
     </div>
     <div class="right-side">
         <button class="btn">Update</button>
@@ -62,8 +62,8 @@
 
    <div class="box">
     <div class="left-side">
-        <p class="title">Government ID</p>
-        <p class="answer">Not provided</p>
+        <p class="title">Phone No</p>
+        <p class="answer"><%= user.phone %></p>
     </div>
     <div class="right-side">
         <button class="btn">Update</button>
@@ -73,20 +73,20 @@
    <hr style="margin-top: 2.5%; border-color: rgba(149, 147, 147, 0.152);">
 
 
-   <div class="box">
+   <!-- <div class="box">
     <div class="left-side">
-        <p class="title">Address</p>
-        <p class="answer">Not provided</p>
+        <p class="title">Date of Birth</p>
+        <p class="answer"><%= user.dob %></p>
     </div>
     <div class="right-side">
         <button class="btn">Update</button>
     </div>
-   </div>
+   </div> -->
 
-   <hr style="margin-top: 2.5%; border-color: rgba(149, 147, 147, 0.152);">
+   <!-- <hr style="margin-top: 2.5%; border-color: rgba(149, 147, 147, 0.152);"> -->
 
 
-   <div class="box">
+   <!-- <div class="box">
     <div class="left-side">
         <p class="title">Emergency contact</p>
         <p class="answer">Not provided</p>
@@ -94,7 +94,7 @@
     <div class="right-side">
         <button class="btn">Update</button>
     </div>
-   </div>
+   </div> -->
 
 
     </div>

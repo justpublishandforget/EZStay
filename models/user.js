@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+
 const userSchema = new mongoose.Schema({
     fullname:{
         type : String,
@@ -22,6 +23,7 @@ const userSchema = new mongoose.Schema({
     dob:{
         type : Date,
         require : true
+    
        },
     password:{
         type : String,

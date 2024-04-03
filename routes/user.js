@@ -15,10 +15,16 @@ router.post('/signup', user.createUser);
 
 
 //index
-router.get('/index.html', user.index);
+router.get('/index', user.index);
+
+//root
+router.get('/', user.root);
 
 
 // Logout
 router.get('/logout', user.logout);
+
+//presonalinfo
+router.get('/personalinfo', user.personalinfo);
 
 module.exports = router;

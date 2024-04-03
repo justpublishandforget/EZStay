@@ -39,7 +39,8 @@ app.use(session({
   }));
 
 
-
+  app.set('view engine', 'ejs');
+  
 // Serve static files
 
 global.staticpath = path.join(__dirname, "views");

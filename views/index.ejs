@@ -29,24 +29,13 @@
         <div class="bookmark">
           <i class="ri-heart-fill"></i>
         </div>
-        <!-- <a href="login.html"><button class="btn sign-in-btn">Sign in</button></a> -->
-        <script>
-          const urlParams = new URLSearchParams(window.location.search);
-          const username = urlParams.get("username");
 
-          if (username) {
-            document.write(
-              '<button class="btn sign-in-btn">' + username[0] + "</button>"
-            );
-            const signInBtn = document.querySelector(".btn.sign-in-btn");
-            signInBtn.style.cssText =
-              "height: 10px; width: 40px; font-weight: 600; font-size: 32px; padding: 0; padding-bottom: 50px; border-radius: 50%;";
-          } else {
-            document.write(
-              '<a href="login.html"><button class="btn sign-in-btn">Sign in</button></a>'
-            );
-          }
-        </script>
+        <% if (user.username) { %>
+          <button class="btn sign-in-btn"><%= user.username %></button>
+         
+      <% } else { %>
+          <a href="login.html"><button class="btn sign-in-btn">Sign in</button></a>
+      <% } %>
       </div>
     </nav>
     <!-- Navigation Bar End -->
@@ -59,20 +48,11 @@
           <div class="items-1">
             <button class="iconbtn-1">
               <i class="ri-account-circle-fill"></i>
-              <!-- <a href="login.html" class="icon-info">Sign in</a> -->
-              <script>
-                const urlParam = new URLSearchParams(window.location.search);
-                const usernam = urlParam.get("username");
-                if (usernam) {
-                  document.write(
-                    '<a href="/logout" class="icon-info">Sign out</a>'
-                  );
-                } else {
-                  document.write(
-                    '<a href="login.html" class="icon-info">Sign in</a>'
-                  );
-                }
-              </script>
+              <% if (user.username) { %>
+                  <a href="/logout" class="icon-info">Sign out</a>
+              <% } else { %>
+                  <a href="login.html" class="icon-info">Sign in</a>
+              <% } %>
             </button>
           </div>
 
