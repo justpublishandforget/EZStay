@@ -27,4 +27,11 @@ router.get('/logout', user.logout);
 //presonalinfo
 router.get('/personalinfo', user.personalinfo);
 
+// update
+router.post('/updateName', user.updateName);
+router.post('/updateUsername', user.updateUsername);
+router.post('/updateEmail', user.updateEmail);
+router.post('/updatePhone', user.updatePhone);
+
+
 module.exports = router;

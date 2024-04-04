@@ -11,7 +11,8 @@
 <body>
     <nav>
         <div class="nav-leftside">
-            <img class="logo" src="images/logo.svg" alt="img" />
+            <a href="./userdashboard.html"><img class="logo" src="images/logo.svg" alt="img" /></a>
+            
           </div>
     </nav>
 
@@ -24,7 +25,13 @@
         <p class="answer"><%= user.fullname %></p>
     </div>
     <div class="right-side">
-        <button class="btn">Update</button>
+        <button class="btn edit">Edit</button>
+    </div>
+    <div class="modal hidden">
+        <form action="/updateName" method="post">
+            <input type="text"  name="fullname" id="fullname" placeholder="Enter new name">
+            <button type="submit" class="btn updatebtn">Update</button>
+        </form>
     </div>
     
    </div>
@@ -38,7 +45,13 @@
         <p class="answer"><%= user.username %></p>
     </div>
     <div class="right-side">
-        <button class="btn">Update</button>
+        <button class="btn edit">Edit</button>
+    </div>
+    <div class="modal hidden">
+        <form action="/updateUsername" method="post">
+            <input type="text" name="username" id="username" placeholder="Enter new username">
+            <button type="submit" class="btn updatebtn">Update</button>
+        </form>
     </div>
    </div>
 
@@ -54,7 +67,13 @@
         <p class="answer"><%= user.email %></p>
     </div>
     <div class="right-side">
-        <button class="btn">Update</button>
+        <button class="btn edit">Edit</button>
+    </div>
+    <div class="modal hidden">
+        <form action="/updateEmail" method="post">
+            <input type="text" name="email" id="email" placeholder="Enter new email">
+            <button type="submit" class="btn updatebtn">Update</button>
+        </form>
     </div>
    </div>
 
@@ -66,40 +85,42 @@
         <p class="answer"><%= user.phone %></p>
     </div>
     <div class="right-side">
-        <button class="btn">Update</button>
+        <button class="btn edit">Edit</button>
+    </div>
+    <div class="modal hidden">
+        <form action="/updatePhone" method="post">
+            <input type="tel" name="phone"  id="phone" placeholder="Enter new Phone NO">
+            <button type="submit" class="btn updatebtn">Update</button>
+        </form>
     </div>
    </div>
 
    <hr style="margin-top: 2.5%; border-color: rgba(149, 147, 147, 0.152);">
 
-
-   <!-- <div class="box">
-    <div class="left-side">
-        <p class="title">Date of Birth</p>
-        <p class="answer"><%= user.dob %></p>
-    </div>
-    <div class="right-side">
-        <button class="btn">Update</button>
-    </div>
-   </div> -->
-
-   <!-- <hr style="margin-top: 2.5%; border-color: rgba(149, 147, 147, 0.152);"> -->
-
-
-   <!-- <div class="box">
-    <div class="left-side">
-        <p class="title">Emergency contact</p>
-        <p class="answer">Not provided</p>
-    </div>
-    <div class="right-side">
-        <button class="btn">Update</button>
-    </div>
-   </div> -->
-
-
-    </div>
+ </div>
 </section>
-   
+
+
+  <script>
+    const editbtns = document.querySelectorAll('.edit');
+    const modals = document.querySelectorAll('.modal');
+    const container = document.querySelector('.container');
+
+    editbtns.forEach((btn, index) => {
+    btn.addEventListener('click', function(){
+        modals[index].classList.remove('hidden');
+    });
+});
+
+document.body.addEventListener('click', function(event) {
+    if (!container.contains(event.target)) {
+        modals.forEach(modal => {
+            modal.classList.add('hidden');
+        });
+    }
+});
+
+  </script> 
     
 </body>
 </html>

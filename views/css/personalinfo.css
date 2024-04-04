@@ -89,4 +89,30 @@ h1{
     background-color: #FDDB32 ;
     border: none;
     border-radius: 10px;
+    
+}
+
+.modal{
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    border: 1px solid black;
+    height: 4rem;
+}
+
+input{
+    margin-left: 2vh;
+    margin-top: 2vh;
+}
+
+.updatebtn{
+   
+        margin-left: 65vh;
+        margin-top: 2vh;
+        position: absolute;
+    
+}
+
+.hidden{
+    display: none;
 }
