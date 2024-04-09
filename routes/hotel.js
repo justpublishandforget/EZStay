@@ -3,12 +3,11 @@ const router = express.Router();
 const { MongoClient } = require('mongodb');
 
 
-
 // Fetch hotel data function
 const fetchHotelData = async () => {
     let client;
     try {
-       client = new MongoClient(global.url);
+       client = new MongoClient(process.env.url);
       await client.connect();
       const database = client.db('ezstay'); 
       const collection = database.collection('hotels'); 
