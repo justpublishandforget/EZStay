@@ -1,13 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const session = require('express-session');
+// const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv');
 const path = require('path');
-// const crypto = require('crypto');
 
-
-// const secretKey = crypto.randomBytes(64).toString('hex');
 
 
 // Configurations
@@ -16,12 +13,12 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
-app.use(session({
-    secret: 'secretKey', 
-    resave: false,
-    saveUninitialized: true,
-    cookie: { secure: false, maxAge: 60000 }
-  }));
+// app.use(session({
+//     secret: 'secretKey', 
+//     resave: false,
+//     saveUninitialized: true,
+//     cookie: { secure: false, maxAge: 60000 }
+//   }));
 
 
 

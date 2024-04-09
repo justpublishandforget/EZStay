@@ -30,9 +30,8 @@ router.get('/personalinfo',verifyToken, user.personalinfo);
 
 // update
 router.post('/updateName',verifyToken, user.updateName);
-router.post('/updateUsername', user.updateUsername);
-router.post('/updateEmail', user.updateEmail);
-router.post('/updatePhone', user.updatePhone);
+router.post('/updateEmail', verifyToken, user.updateEmail);
+router.post('/updatePhone', verifyToken, user.updatePhone);
 
 
 module.exports = router;

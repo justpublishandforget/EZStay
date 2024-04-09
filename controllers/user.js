@@ -66,10 +66,6 @@ exports.accessUser = async (req, res) => {
 
             const token = jwt.sign( userPayload , process.env.JWT_SECRET, { expiresIn: "1h"});
 
-            // req.session.user = user;
-            // res.setHeader('Authorization', `Bearer ${token}`);
-            
-            // res.status(200).json({token, user});
 
             res.cookie("token", token, {
               httpOnly: true,
@@ -87,41 +83,37 @@ exports.accessUser = async (req, res) => {
 
 //index
 exports.index = async (req, res) => {
-  // if (!req.session.user) {
-  //   res.redirect('/login');
-  // } else {
-    
-  //   res.render('index', { user: req.session.user });
-   
-  // } 
+  
   res.render('index', { user: req.user });
 };
 
 // root
 exports.root = async (req, res) => {
-  // if (!req.session.user) {
-  //   res.redirect('/login');
-  // } else {
-    
-  //   res.render('index', { user: req.session.user });
-   
-  // }
-    // Assuming root page requires authentication
+
     res.render('index', { user: req.user });
 
 };
 
 //personalinfo
 exports.personalinfo = async (req, res) => {
-  // if (!req.session.user) {
-  //   res.redirect('/login');
-  // } else {
- 
-  //   res.render('personalinfo', { user: req.session.user });
-   
-  // }
-  // Assuming personalinfo page requires authentication
+  
   res.render('personalinfo', { user: req.user });
+}
+
+// fuction for update
+
+const updating = function(req, res){
+
+       // Create a new payload without the 'exp' property
+       const { exp, ...userPayload } = req.user;
+
+       // Generate a new token with updated user payload
+       const token = jwt.sign(userPayload, process.env.JWT_SECRET, { expiresIn: "1h" });
+
+      // Set the new token in the cookie
+      res.cookie("token", token, {
+          httpOnly: true,
+      });
 }
 
 // Updates
@@ -139,47 +131,10 @@ exports.updateName = async (req, res) => {
       // Update the name in the user payload
       req.user.fullname = fullname;
 
-       // Create a new payload without the 'exp' property
-       const { exp, ...userPayload } = req.user;
-
-       // Generate a new token with updated user payload
-       const token = jwt.sign(userPayload, process.env.JWT_SECRET, { expiresIn: "1h" });
-       
-      // Set the new token in the cookie
-      res.cookie("token", token, {
-          httpOnly: true,
-      });
+      // function call
+      updating(req, res);
       
-      
-      // Render personalinfo.ejs with updated information
-      res.render('personalinfo', { user: updatedUser });
-  } catch (err) {
-      console.error(err);
-      res.status(500).send(`Error updating name: ${err.message}`);
-  }
-};
-
-exports.updateUsername = async (req, res) => {
-  try {
-    
-
-      const userId = req.user.id;
-      const { username } = req.body;
-
-      const existingUser = await User.findOne({ username });
-    if (existingUser) {
-        return res.status(400).send('Username already exists. Please choose a different username.');
-    }
-
-      await User.findByIdAndUpdate(userId, { username });
-      
-      // Update name in session
-      req.user.username = username;
-      
-      // Fetch updated user information
-      const updatedUser = await User.findById(userId);
-      
-      
+  
       // Render personalinfo.ejs with updated information
       res.render('personalinfo', { user: updatedUser });
   } catch (err) {
@@ -194,12 +149,14 @@ exports.updateEmail = async (req, res) => {
       const { email } = req.body;
       await User.findByIdAndUpdate(userId, { email });
       
-      // Update name in session
-      req.user.email = email;
-      
       // Fetch updated user information
       const updatedUser = await User.findById(userId);
-      
+
+      // Update name 
+      req.user.email = email;
+
+      // function call
+      updating(req, res);
       
       // Render personalinfo.ejs with updated information
       res.render('personalinfo', { user: updatedUser });
@@ -215,12 +172,15 @@ exports.updatePhone = async (req, res) => {
       const { phone } = req.body;
       await User.findByIdAndUpdate(userId, { phone });
       
-      // Update name in session
-      req.user.phone = phone;
-      
       // Fetch updated user information
       const updatedUser = await User.findById(userId);
+
+
+      // Update name
+      req.user.phone = phone;
       
+      // function call
+      updating(req, res);
       
       // Render personalinfo.ejs with updated information
       res.render('personalinfo', { user: updatedUser });
@@ -232,13 +192,6 @@ exports.updatePhone = async (req, res) => {
 
 // Logout
 exports.logout = async (req, res) => {
-    // req.session.destroy(err => {
-    //         if (err) {
-    //           console.error(err);
-    //           res.status(500).send('Error logging out');
-    //         } else {
-    //           res.redirect('/login');
-    //         }
-    //       });
+  
     res.clearCookie('token').redirect('/login');
 }
